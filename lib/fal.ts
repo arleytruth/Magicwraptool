@@ -2,11 +2,23 @@ import "server-only";
 
 import { fal } from "@fal-ai/client";
 
-import { serverEnv } from "@/lib/env";
+// Lazy-load FAL config to avoid build-time errors
+let falConfigured = false;
 
-fal.config({
-    credentials: serverEnv.FAL_API_KEY,
-});
+const ensureFalConfigured = () => {
+    if (falConfigured) return;
+    
+    const apiKey = process.env.FAL_API_KEY;
+    if (!apiKey) {
+        throw new Error("Missing FAL_API_KEY environment variable");
+    }
+    
+    fal.config({
+        credentials: apiKey,
+    });
+    
+    falConfigured = true;
+};
 
 export interface GenerateWrapPayload {
     objectImageUrl: string;
@@ -24,6 +36,9 @@ export interface GenerateWrapResponse {
 export async function generateWrapImage(
     payload: GenerateWrapPayload,
 ): Promise<GenerateWrapResponse> {
+    // Ensure FAL is configured before using
+    ensureFalConfigured();
+    
     try {
         console.log("[fal.ai] İstek gönderiliyor:", {
             model: "fal-ai/reve/remix",
