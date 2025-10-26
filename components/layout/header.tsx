@@ -14,6 +14,7 @@ import { Sparkles, Wand2, Coins, Plus, Video } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/magicwrap/ThemeToggle";
+import { LanguageSwitcher } from "@/components/magicwrap/LanguageSwitcher";
 import { useAuth } from "@/hooks/useAuth";
 import { Badge } from "@/components/ui/badge";
 
@@ -193,6 +194,7 @@ export function Header({ navLinks = [] }: HeaderProps) {
                                 <span className="sm:hidden">Video</span>
                             </Button>
 
+                            <LanguageSwitcher />
                             <ThemeToggle />
 
                             <UserButton
@@ -201,6 +203,7 @@ export function Header({ navLinks = [] }: HeaderProps) {
                                 appearance={{
                                     elements: {
                                         userButtonAvatarBox: "h-9 w-9",
+                                        notificationBadge: "hidden",
                                     },
                                 }}
                             />
@@ -217,6 +220,7 @@ export function Header({ navLinks = [] }: HeaderProps) {
                                 {pendingAction === "/generate" ? "Yükleniyor..." : "Hemen Başla"}
                             </Button>
 
+                            <LanguageSwitcher />
                             <ThemeToggle />
 
                             {isSignedIn ? (
@@ -226,6 +230,7 @@ export function Header({ navLinks = [] }: HeaderProps) {
                                     appearance={{
                                         elements: {
                                             userButtonAvatarBox: "h-9 w-9",
+                                            notificationBadge: "hidden",
                                         },
                                     }}
                                 />

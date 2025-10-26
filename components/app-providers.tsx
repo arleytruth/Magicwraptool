@@ -22,6 +22,13 @@ export function AppProviders({ children }: PropsWithChildren) {
     return (
         <ClerkProvider 
             publishableKey={browserEnv.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY}
+            appearance={{
+                elements: {
+                    organizationSwitcherTrigger: "hidden",
+                    notificationBadge: "hidden",
+                    badge: "hidden",
+                },
+            }}
         >
             <ConvexProviderWithClerk client={convexClient} useAuth={useClerkAuth}>
                 <ThemeProvider

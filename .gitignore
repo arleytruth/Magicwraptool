@@ -51,3 +51,6 @@ magicwrap.disabled/
 .cursormcp
 mcp.json
 
+
+# Local Netlify folder
+.netlify
