@@ -1,0 +1,274 @@
+{
+  "common": {
+    "loading": "Cargando...",
+    "error": "Error",
+    "success": "Éxito",
+    "save": "Guardar",
+    "cancel": "Cancelar",
+    "download": "Descargar",
+    "delete": "Eliminar",
+    "edit": "Editar",
+    "create": "Crear",
+    "close": "Cerrar",
+    "back": "Atrás",
+    "next": "Siguiente",
+    "previous": "Anterior",
+    "search": "Buscar",
+    "filter": "Filtrar",
+    "sort": "Ordenar",
+    "yes": "Sí",
+    "no": "No",
+    "ok": "OK",
+    "retry": "Reintentar",
+    "tryAgain": "Intentar de Nuevo",
+    "processing": "Procesando",
+    "completed": "Completado",
+    "failed": "Fallido",
+    "pending": "Pendiente",
+    "waiting": "Esperando",
+    "uploading": "Subiendo",
+    "preparing": "Preparando"
+  },
+  "header": {
+    "features": "Características",
+    "howItWorks": "Cómo Funciona",
+    "pricing": "Precios",
+    "createWrappedImage": "Crear Mi Imagen Envuelta",
+    "create": "Crear",
+    "profile": "Perfil",
+    "credits": "Créditos",
+    "gallery": "Mi Galería",
+    "creditBalance": "Saldo de Créditos",
+    "logout": "Cerrar Sesión"
+  },
+  "auth": {
+    "signInRequired": "Autenticación Requerida",
+    "pleaseSignIn": "Por favor inicia sesión para ver tu perfil.",
+    "signIn": "Iniciar Sesión",
+    "signOut": "Cerrar Sesión"
+  },
+  "generate": {
+    "pageTitle": "Crea Tu Imagen Envuelta",
+    "pageSubtitle": "Sube dos imágenes y deja que la IA haga la magia",
+    "step1Title": "Paso 1: Subir Objeto",
+    "step2Title": "Paso 2: Subir Material",
+    "clickToUpload": "Haz clic para subir",
+    "object": "objeto",
+    "material": "material",
+    "clear": "Limpiar",
+    "wrapItNow": "Envolver Ahora",
+    "processing": "Procesando...",
+    "yourWrappedImageReady": "¡Tu Imagen Envuelta Está Lista! 🎉",
+    "heresYourWrappedDesign": "Aquí está tu diseño envuelto profesionalmente",
+    "beforeAfter": "Antes & Después",
+    "originalObject": "Objeto Original",
+    "materialApplied": "Material Aplicado",
+    "finalResult": "✨ Resultado Final",
+    "downloadImage": "Descargar Imagen",
+    "saveToGallery": "Guardar en Galería",
+    "createAnother": "Crear Otro",
+    "creditsRemaining": "créditos restantes",
+    "finalizing": "Finalizando tu imagen envuelta…",
+    "jobId": "ID de Trabajo",
+    "uploadingImages": "Subiendo Imágenes...",
+    "imagesBeingPrepared": "Tus imágenes se están preparando para el procesamiento",
+    "processStarted": "Proceso Iniciado",
+    "imageBeingCreated": "Tu imagen se está creando. Este proceso tomará aproximadamente 25-40 segundos...",
+    "failedToCreateJob": "Error al crear trabajo",
+    "settingResultImage": "Configurando imagen de resultado:",
+    "objectDropHint": "Haz clic aquí o arrastra tu foto del objeto",
+    "materialDropHint": "Haz clic aquí o arrastra tu foto del material",
+    "wrappedImageReady": "¡Tu imagen envuelta está lista!",
+    "processFailed": "Proceso Fallido",
+    "imagesCouldNotBeProcessed": "Tus imágenes no pudieron ser procesadas. Por favor usa imágenes JPG o PNG de alta calidad e intenta nuevamente.",
+    "downloaded": "¡Descargado!",
+    "wrappedImageDownloaded": "Tu imagen envuelta ha sido descargada exitosamente",
+    "downloadFailed": "Descarga Fallida",
+    "imageCouldNotBeDownloaded": "La imagen no pudo ser descargada. Por favor intenta nuevamente.",
+    "savedToGallery": "¡Guardado en Galería!",
+    "imageSavedToGallery": "Tu imagen ha sido guardada en tu galería. Puedes acceder desde tu página de perfil.",
+    "saveFailed": "Guardado Fallido",
+    "imageCouldNotBeSaved": "La imagen no pudo ser guardada. Por favor intenta nuevamente.",
+    "preparingImages": "Preparando Imágenes...",
+    "creatingWrappedImage": "Creando Imagen Envuelta...",
+    "imagesBeingUploaded": "Tus imágenes se están subiendo y preparando para el procesamiento...",
+    "aiAnalyzingImages": "La IA está analizando tus imágenes y aplicando el envoltorio de material. Este proceso usualmente toma 25-40 segundos.",
+    "waitingInQueue": "Esperando en Cola",
+    "chooseCategory": "Elige Tu Categoría",
+    "selectObjectToWrap": "Selecciona qué tipo de objeto quieres envolver"
+  },
+  "profile": {
+    "myImageGallery": "Mi Galería de Imágenes",
+    "allWrappedImagesCreated": "Todas las imágenes envueltas que has creado",
+    "noImagesYet": "Aún No Hay Imágenes",
+    "goToGeneratePage": "Ve a la página Generar para crear tu primera imagen envuelta",
+    "getStarted": "Comenzar"
+  },
+  "footer": {
+    "poweredBy": "Desarrollado por fal.ai SeeDream V4 Edit • Envoltura de Vehículos AI Profesional",
+    "ultraRealistic": "Ultra-realista • Calidad 8K • Fotorealista"
+  },
+  "languageSwitcher": {
+    "changeLanguage": "Cambiar idioma"
+  },
+  "howItWorks": {
+    "title": "Es Realmente Tan Fácil",
+    "subtitle": "Solo tres pasos simples—no se necesita conocimiento técnico",
+    "bottomText": "¡Eso es todo! Sin configuraciones complicadas ni cosas técnicas.",
+    "tryNowFree": "PRUEBA GRATIS AHORA",
+    "steps": {
+      "uploadObject": {
+        "title": "Sube Tu Objeto",
+        "description": "Toma una foto de lo que quieres envolver—un auto, pared, mesa, o cualquier otra cosa. Súbelo aquí."
+      },
+      "uploadDesign": {
+        "title": "Sube Tu Diseño",
+        "description": "Sube una foto del material o patrón que quieres—madera, fibra de carbono, o cualquier textura."
+      },
+      "getResult": {
+        "title": "Obtén Tu Resultado",
+        "description": "Espera 30 segundos y tu imagen envuelta está lista! Descárgala y úsala inmediatamente."
+      }
+    }
+  },
+  "pricing": {
+    "title": "Comienza Gratis, Crece Según Necesites",
+    "subtitle": "Todos obtienen 3 envoltorios gratis para probar. ¡No se necesita tarjeta de crédito para comenzar!",
+    "tryNowFree": "PRUEBA GRATIS AHORA",
+    "bottomText": "Todos los planes funcionan de la misma manera—solo elige cuántos envoltorios necesitas. Los créditos nunca expiran y siempre puedes comprar más después.",
+    "mostPopular": "Más Popular",
+    "getStarted": "Comenzar",
+    "plans": {
+      "starter": {
+        "name": "Inicial",
+        "features": [
+          "10 envoltorios de imagen",
+          "Descargas de alta calidad",
+          "Listo en 30 segundos",
+          "Funciona en cualquier objeto"
+        ]
+      },
+      "professional": {
+        "name": "Profesional",
+        "features": [
+          "25 envoltorios de imagen",
+          "Descargas de alta calidad",
+          "Listo en 30 segundos",
+          "Funciona en cualquier objeto",
+          "Soporte por email"
+        ]
+      },
+      "business": {
+        "name": "Negocio",
+        "features": [
+          "100 envoltorios de imagen",
+          "Descargas de alta calidad",
+          "Listo en 30 segundos",
+          "Funciona en cualquier objeto",
+          "Soporte prioritario por email",
+          "Perfecto para equipos"
+        ]
+      }
+    }
+  },
+  "features": {
+    "title": "Simple pero Poderoso",
+    "subtitle": "Todo lo que necesitas, nada que no",
+    "tryNowFree": "PRUEBA GRATIS AHORA",
+    "items": {
+      "worksOnAnything": {
+        "title": "Funciona en Cualquier Cosa",
+        "description": "Autos, paredes, muebles, edificios—si puedes fotografiarlo, podemos envolverlo con cualquier diseño"
+      },
+      "anyPatternOrTexture": {
+        "title": "Cualquier Patrón o Textura",
+        "description": "Envolturas de vinilo, grano de madera, fibra de carbono, mármol, metal—usa cualquier foto de material que quieras"
+      },
+      "superFast": {
+        "title": "Super Rápido",
+        "description": "Tus resultados están listos en solo 30 segundos. Sin esperar—sube y ve!"
+      },
+      "looksCompletelyReal": {
+        "title": "Se Ve Completamente Real",
+        "description": "La forma se mantiene perfecta mientras el material se envuelve naturalmente con iluminación y sombras realistas"
+      },
+      "easyToSave": {
+        "title": "Fácil de Guardar",
+        "description": "Descarga imágenes de alta calidad inmediatamente. Comparte con clientes o úsalas como necesites"
+      },
+      "yourLanguage": {
+        "title": "Tu Idioma",
+        "description": "Disponible en inglés, turco, español, francés y alemán—usa lo que te sea cómodo"
+      }
+    }
+  },
+  "categorySelector": {
+    "vehicle": "Envoltura de Vehículo",
+    "furniture": "Envoltura de Muebles",
+    "wall": "Revestimiento de Pared",
+    "building": "Envoltura de Edificio",
+    "electronics": "Piel de Dispositivo",
+    "device": "Piel de Dispositivo",
+    "box": "Envoltura de Caja",
+    "autoTuning": "Auto Tuning",
+    "generalItem": "Envoltura de Artículo General"
+  }
+  ,
+  "upload": {
+    "categoryTitle": "Elige Tu Categoría",
+    "categoryDescription": "Selecciona qué tipo de objeto quieres envolver",
+    "objectPhoto": {
+      "title": "Paso 1: Foto de Tu Objeto",
+      "description": "Sube una foto de tu auto, pared, muebles o cualquier cosa que quieras envolver",
+      "helpText": "Cualquier foto sirve—asegúrate de que el objeto sea claramente visible"
+    },
+    "materialPhoto": {
+      "title": "Paso 2: Foto de Tu Diseño",
+      "description": "Sube una foto del material o patrón que quieres aplicar",
+      "helpText": "Madera, vinilo, fibra de carbono, mármol—cualquier textura que te guste"
+    },
+    "startCreating": "Comenzar Ahora"
+  },
+  "furnitureMaterialAnalysis": {
+    "title": "Análisis de Material de Muebles",
+    "uploadDescription": "Arrastra y suelta tu imagen de material aquí, o haz clic para seleccionar",
+    "supportedFormats": "Soporta JPG, PNG, WEBP hasta 10MB",
+    "analyze": "Analizar Material",
+    "analyzing": "Analizando...",
+    "edit": "Editar Resultados",
+    "reset": "Reiniciar",
+    "results": "Resultados del Análisis",
+    "texture": "Análisis de Textura",
+    "textureType": "Tipo de Textura",
+    "finish": "Acabado de Superficie",
+    "characteristics": "Características del Material",
+    "color": "Análisis de Color",
+    "primaryColor": "Color Primario",
+    "secondaryColor": "Color Secundario",
+    "colorPalette": "Paleta de Colores",
+    "pattern": "Análisis de Patrón",
+    "structure": "Estructura del Patrón",
+    "direction": "Dirección del Patrón",
+    "scale": "Escala del Material",
+    "detail": "Nivel de Detalle",
+    "confirm": "Confirmar Análisis",
+    "lighting": "Propiedades de Iluminación",
+    "reflectivity": "Reflectividad",
+    "lightAbsorption": "Absorción de Luz",
+    "shadowIntensity": "Intensidad de Sombra",
+    "depthProperties": "Propiedades de Profundidad",
+    "woodGrainDepth": "Profundidad del Grano de Madera",
+    "fabricTextureDepth": "Profundidad de Textura de Tela",
+    "leatherSheenLevel": "Nivel de Brillo del Cuero"
+  },
+  "furnitureSurfaceApplication": {
+    "title": "Aplicación de Superficie de Muebles",
+    "objectPreview": "Vista Previa del Objeto",
+    "materialPreview": "Vista Previa del Material",
+    "applying": "Aplicando...",
+    "applyMaterial": "Aplicar Material",
+    "reset": "Reiniciar",
+    "appliedProperties": "Propiedades Aplicadas",
+    "needAnalysis": "Por favor completa el análisis de material y sube ambas imágenes"
+  }
+}

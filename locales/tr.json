@@ -1,0 +1,300 @@
+{
+  "common": {
+    "loading": "Yükleniyor...",
+    "error": "Hata",
+    "success": "Başarılı",
+    "save": "Kaydet",
+    "cancel": "İptal",
+    "download": "İndir",
+    "delete": "Sil",
+    "edit": "Düzenle",
+    "create": "Oluştur",
+    "close": "Kapat",
+    "back": "Geri",
+    "next": "İleri",
+    "previous": "Önceki",
+    "search": "Ara",
+    "filter": "Filtrele",
+    "sort": "Sırala",
+    "yes": "Evet",
+    "no": "Hayır",
+    "ok": "Tamam",
+    "retry": "Tekrar Dene",
+    "tryAgain": "Tekrar Dene",
+    "processing": "İşleniyor",
+    "completed": "Tamamlandı",
+    "failed": "Başarısız",
+    "pending": "Bekliyor",
+    "waiting": "Bekliyor",
+    "uploading": "Yükleniyor",
+    "preparing": "Hazırlanıyor"
+  },
+  "header": {
+    "features": "Özellikler",
+    "howItWorks": "Nasıl Çalışır",
+    "pricing": "Fiyatlandırma",
+    "createWrappedImage": "Şimdi Kaplamayı Başlat",
+    "create": "Oluştur",
+    "profile": "Profil",
+    "credits": "Kredi",
+    "gallery": "Galerim",
+    "creditBalance": "Kredi Bakiyesi",
+    "logout": "Çıkış Yap"
+  },
+  "auth": {
+    "signInRequired": "Giriş Yapmanız Gerekiyor",
+    "pleaseSignIn": "Profilinizi görüntülemek için lütfen giriş yapın.",
+    "signIn": "Giriş Yap",
+    "signOut": "Çıkış Yap"
+  },
+  "generate": {
+    "pageTitle": "Şimdi Kaplamayı Başlat",
+    "pageSubtitle": "İki görsel yükleyin ve Yapay Zeka kaplamasını yapsın",
+    "step1Title": "Adım 1: Kaplamak İstediğiniz Nesneyi Yükleyin",
+    "step2Title": "Adım 2: Kaplamak İstediğiniz Malzemeyi Yükleyin",
+    "clickToUpload": "Yüklemek için tıklayın",
+    "object": "nesne",
+    "material": "malzeme",
+    "clear": "Temizle",
+    "wrapItNow": "Şimdi Kaplamayı Başlat",
+    "processing": "İşleniyor...",
+    "yourWrappedImageReady": "Görseliniz Hazır! 🎉",
+    "heresYourWrappedDesign": "İşte profesyonelce kaplanmış tasarımınız",
+    "beforeAfter": "Öncesi & Sonrası",
+    "originalObject": "Orijinal Nesne",
+    "materialApplied": "Uygulanan Malzeme",
+    "finalResult": "✨ Final Sonuç",
+    "downloadImage": "Görseli İndir",
+    "saveToGallery": "Galeriye Kaydet",
+    "createAnother": "Başka Oluştur",
+    "creditsRemaining": "kredi kaldı",
+    "finalizing": "Görseliniz tamamlanıyor...",
+    "jobId": "İş Kimliği",
+    "uploadingImages": "Görseller Yükleniyor...",
+    "imagesBeingPrepared": "Görselleriniz işleme hazırlanıyor",
+    "processStarted": "İşlem Başladı",
+    "imageBeingCreated": "Görseliniz oluşturuluyor. Bu işlem yaklaşık 25-40 saniye sürecek...",
+    "failedToCreateJob": "İş oluşturulamadı",
+    "settingResultImage": "Sonuç görseli ayarlanıyor:",
+    "objectDropHint": "Nesne fotoğrafını buraya tıkla veya sürükleyip bırak",
+    "materialDropHint": "Malzeme fotoğrafını buraya tıkla veya sürükleyip bırak",
+    "wrappedImageReady": "Kaplama görseliniz hazır! İndirebilirsiniz.",
+    "processFailed": "İşlem Başarısız",
+    "imagesCouldNotBeProcessed": "Görselleriniz işlenemedi. Lütfen yüksek kaliteli JPG veya PNG görseller kullanın ve tekrar deneyin.",
+    "downloaded": "İndirildi!",
+    "wrappedImageDownloaded": "Kaplama görseliniz başarıyla indirildi",
+    "downloadFailed": "İndirme Başarısız",
+    "imageCouldNotBeDownloaded": "Görsel indirilemedi. Lütfen tekrar deneyin.",
+    "savedToGallery": "Galeriye Kaydedildi!",
+    "imageSavedToGallery": "Görseliniz kütüphanenize kaydedildi. Profil sayfanızdan erişebilirsiniz.",
+    "saveFailed": "Kaydetme Başarısız",
+    "imageCouldNotBeSaved": "Görsel kaydedilemedi. Lütfen tekrar deneyin.",
+    "preparingImages": "Görseller Hazırlanıyor...",
+    "creatingWrappedImage": "Kaplama Görseli Oluşturuluyor...",
+    "imagesBeingUploaded": "Görselleriniz yükleniyor ve işleme hazırlanıyor...",
+    "aiAnalyzingImages": "Yapay Zeka görsellerinizi analiz ediyor ve malzeme Kaplamasını uyguluyor. Bu işlem genellikle 25-40 saniye sürer.",
+    "waitingInQueue": "Sırada Bekliyor",
+    "chooseCategory": "Kategorinizi Seçin",
+    "selectObjectToWrap": "Kaplamak istediğiniz nesne türünü seçin"
+  },
+  "profile": {
+    "memberSince": "Üyelik tarihi",
+    "freeAccount": "Ücretsiz Hesap",
+    "usageStatistics": "Kullanım İstatistikleri",
+    "usageDescription": "Kredi ve üretim performansınızı buradan takip edin.",
+    "totalImagesGenerated": "Toplam Üretilen Görsel",
+    "totalCreditsUsed": "Toplam Harcanan Kredi",
+    "mostUsedCategory": "En Sık Kullanılan Kategori",
+    "lastGeneration": "Son Üretim",
+    "noGenerations": "Henüz üretim yok",
+    "noCategoryData": "Kategori verisi yok",
+    "creditBalance": "Kredi Bakiyesi",
+    "currentBalance": "Güncel Kredi",
+    "manageCredits": "Yeni görseller üretebilmek için kredinizi artırın.",
+    "addCredits": "Kredi Yükle",
+    "creditTopUpOptions": "Kredi Paketleri",
+    "chooseCreditPackage": "İhtiyacınıza uygun kredi paketini seçin",
+    "credits": "kredi",
+    "creditsLower": "kredi",
+    "imageGenerations": "görsel üretimi",
+    "buyNow": "Hemen Satın Al",
+    "savePercentage": "%{{percentage}} tasarruf",
+    "fastProcessing": "30 saniyeden kısa sürede işlem tamam",
+    "prioritySupport": "Öncelikli destek dahildir",
+    "recommendedPackage": "Düzenli kullanım için önerilen paket",
+    "resultImageAlt": "Oluşturulan kaplama görseli",
+    "objectImageAlt": "Orijinal nesne görseli",
+    "materialImageAlt": "Malzeme görseli",
+    "myImageGallery": "Görsel Kütüphanem",
+    "allWrappedImagesCreated": "Oluşturduğunuz tüm kaplama görselleri",
+    "noImagesYet": "Henüz görsel yok",
+    "goToGeneratePage": "İlk kaplama görselinizi oluşturmak için Generate sayfasına gidin",
+    "getStarted": "Hemen Başla"
+  },
+  "footer": {
+    "poweredBy": " • Profesyonel Yapay Zeka Araç Kaplama",
+    "ultraRealistic": "Ultra-gerçekçi • 8K Kalite • Foto-gerçekçi"
+  },
+  "languageSwitcher": {
+    "changeLanguage": "Dil değiştir"
+  },
+  "howItWorks": {
+    "title": "Gerçekten Bu Kadar Kolay",
+    "subtitle": "Sadece üç basit adım—teknik bilgi gerekmiyor",
+    "bottomText": "Hepsi bu kadar! Karmaşık ayarlar veya teknik şeyler yok.",
+    "tryNowFree": "ŞİMDİ ÜCRETSİZ DENE",
+    "steps": {
+      "uploadObject": {
+        "title": "Nesnenizi Yükleyin",
+        "description": "Kaplamak istediğiniz şeyin fotoğrafını çekin—araba, duvar, masa veya başka bir şey. Buraya yükleyin."
+      },
+      "uploadDesign": {
+        "title": "Tasarımınızı Yükleyin",
+        "description": "İstediğiniz malzemenin veya desenin fotoğrafını yükleyin—ahşap, karbon fiber veya herhangi bir doku."
+      },
+      "getResult": {
+        "title": "Sonucunuzu Alın",
+        "description": "30 saniye bekleyin ve kaplanmış görüntünüz hazır! Hemen indirin ve kullanın."
+      }
+    }
+  },
+  "pricing": {
+    "title": "Ücretsiz Başlayın, İhtiyacınız Kadarıyla devam edin",
+    "subtitle": "Herkes denemek için 3 ücretsiz Kaplama hakkı alır. Başlamak için kredi kartı gerekmiyor!",
+    "tryNowFree": "ŞİMDİ ÜCRETSİZ DENE",
+    "bottomText": "Tüm paketler aynı şekilde çalışır—sadece ihtiyacınız olan Kaplama sayısını seçin. Krediler hiçbir zaman süresi dolmaz ve daha sonra her zaman daha fazla satın alabilirsiniz.",
+    "mostPopular": "En Popüler",
+    "getStarted": "Başlayın",
+    "plans": {
+      "starter": {
+        "name": "Başlangıç",
+        "features": [
+          "10 görsel Kaplama",
+          "Yüksek kaliteli indirmeler",
+          "30 saniyede hazır",
+          "Herhangi bir nesnede çalışır"
+        ]
+      },
+      "professional": {
+        "name": "Profesyonel",
+        "features": [
+          "25 görsel Kaplama",
+          "Yüksek kaliteli indirmeler",
+          "30 saniyede hazır",
+          "Herhangi bir nesnede çalışır",
+          "E-posta desteği"
+        ]
+      },
+      "business": {
+        "name": "İşletme",
+        "features": [
+          "100 görsel Kaplama",
+          "Yüksek kaliteli indirmeler",
+          "30 saniyede hazır",
+          "Herhangi bir nesnede çalışır",
+          "Öncelikli e-posta desteği",
+          "Takımlar için mükemmel"
+        ]
+      }
+    }
+  },
+  "features": {
+    "title": "Artık Yapay Zeka ile gerçekçi kaplamalar oluşturmak çok kolay",
+    "subtitle": "Anında, profesyonel ve hızlı sonuçlar elde edin",
+    "tryNowFree": "ŞİMDİ ÜCRETSİZ DENE",
+    "items": {
+      "worksOnAnything": {
+        "title": "Profesyonel Kaplama Ustaları Tarafından Geliştirildi",
+        "description": "Arabalar, duvarlar, mobilyalar, binalar—fotoğrafını çekebileceğiniz her şeyi istediğiniz tasarım ile sarabiliriz"
+      },
+      "anyPatternOrTexture": {
+        "title": "Her Desen veya Doku",
+        "description": "Vinil kaplamalar, ahşap desen, karbon fiber, mermer, metal—istediğiniz herhangi bir malzeme fotoğrafını kullanın"
+      },
+      "superFast": {
+        "title": "Çok Hızlı",
+        "description": "Sonuçlarınız sadece 30 saniyede hazır. Bekleme yok—yükleyin ve gidin!"
+      },
+      "looksCompletelyReal": {
+        "title": "Tamamen Gerçek Görünüyor",
+        "description": "Şekil mükemmel kalırken malzeme gerçekçi ışık ve gölgelerle doğal olarak sarılır"
+      },
+      "easyToSave": {
+        "title": "Kolayca Kaydedilir",
+        "description": "Yüksek kaliteli görselleri hemen indirin. Müşterilerle paylaşın veya ihtiyacınız olduğu gibi kullanın"
+      },
+      "yourLanguage": {
+        "title": "Sizin Diliniz",
+        "description": "Uygulama Türkçe olarak geliştirildi, ancak diğer dillerde de kullanılabilir"
+      }
+    }
+  },
+  "categorySelector": {
+    "vehicle": "Araç Kaplama",
+    "furniture": "Mobilya Kaplama",
+    "wall": "Duvar Kaplama",
+    "building": "Bina Kaplama",
+    "electronics": "Elektronik Kaplama",
+    "device": "Elektronik Kaplama",
+    "box": "Kutu Kaplama",
+    "autoTuning": "Araç Modifiye",
+    "generalItem": "Genel Eşya Kaplama"
+  },
+  "upload": {
+    "categoryTitle": "Kategorinizi Seçin",
+    "categoryDescription": "Kaplamak istediğiniz nesne türünü seçin",
+    "objectPhoto": {
+      "title": "Adım 1: Nesne Fotoğrafınız",
+      "description": "Arabanızın, duvarınızın, mobilyanızın veya Kaplamak istediğiniz herhangi bir şeyin fotoğrafını yükleyin",
+      "helpText": "Herhangi bir fotoğraf çalışır—nesnenin net görünür olduğundan emin olun"
+    },
+    "materialPhoto": {
+      "title": "Adım 2: Tasarım Fotoğrafınız",
+      "description": "Uygulamak istediğiniz malzemenin veya desenin fotoğrafını yükleyin",
+      "helpText": "Ahşap, vinil, karbon fiber, mermer—beğendiğiniz herhangi bir doku"
+    },
+    "startCreating": "Şimdi Oluşturmaya Başla"
+  },
+  "furnitureMaterialAnalysis": {
+    "title": "Mobilya Malzeme Analizi",
+    "uploadDescription": "Malzeme görselinizi buraya sürükleyip bırakın veya seçmek için tıklayın",
+    "supportedFormats": "JPG, PNG, WEBP formatlarını 10MB boyut sınırına kadar destekler",
+    "analyze": "Malzemeyi Analiz Et",
+    "analyzing": "Analiz Ediliyor...",
+    "edit": "Sonuçları Düzenle",
+    "reset": "Sıfırla",
+    "results": "Analiz Sonuçları",
+    "texture": "Doku Analizi",
+    "textureType": "Doku Türü",
+    "finish": "Yüzey İşlemi",
+    "characteristics": "Malzeme Özellikleri",
+    "color": "Renk Analizi",
+    "primaryColor": "Ana Renk",
+    "secondaryColor": "İkincil Renk",
+    "colorPalette": "Renk Paleti",
+    "pattern": "Desen Analizi",
+    "structure": "Desen Yapısı",
+    "direction": "Desen Yönü",
+    "scale": "Malzeme Ölçeği",
+    "detail": "Detay Seviyesi",
+    "confirm": "Analizi Onayla",
+    "lighting": "Işıklandırma Özellikleri",
+    "reflectivity": "Yansıma",
+    "lightAbsorption": "Işık Emme",
+    "shadowIntensity": "Gölge Yoğunluğu",
+    "depthProperties": "Derinlik Özellikleri",
+    "woodGrainDepth": "Ahşap Desen Derinliği",
+    "fabricTextureDepth": "Kumaş Doku Derinliği",
+    "leatherSheenLevel": "Deri Parıltı Seviyesi"
+  },
+  "furnitureSurfaceApplication": {
+    "title": "Mobilya Yüzey Uygulaması",
+    "objectPreview": "Nesne Önizlemesi",
+    "materialPreview": "Malzeme Önizlemesi",
+    "applying": "Uygulanıyor...",
+    "applyMaterial": "Malzeme Uygula",
+    "reset": "Sıfırla",
+    "appliedProperties": "Uygulanan Özellikler",
+    "needAnalysis": "Lütfen malzeme analizini tamamlayın ve her iki resmi de yükleyin"
+  }
+}

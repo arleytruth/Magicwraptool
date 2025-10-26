@@ -1,31 +1,14 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "@/styles/global.css";
 
-import { ThemeProvider } from "@/components/theme-provider";
-import { ConvexClientProvider } from "@/components/convex-provider";
-import { siteConfig } from "@/config/site";
+import { AppProviders } from "@/components/app-providers";
+import "@/styles/global.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-    title: siteConfig.name,
-    description: siteConfig.description,
-    metadataBase: new URL(process.env.NEXT_PUBLIC_URL!),
-    icons: {
-        icon: [
-            {
-                media: "(prefers-color-scheme: light)",
-                url: "/connext.svg",
-                href: "/connext.svg",
-            },
-            {
-                media: "(prefers-color-scheme: dark)",
-                url: "/connext-dark.svg",
-                href: "/connext-dark.svg",
-            },
-        ],
-    },
+    title: "Magic Wrapper - AI Powered Wrapping",
+    description: "Transform your images with AI-powered wrapping technology",
 };
 
 export default function RootLayout({
@@ -34,18 +17,9 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en" suppressHydrationWarning>
+        <html lang="tr" suppressHydrationWarning>
             <body className={inter.className}>
-                <ConvexClientProvider>
-                    <ThemeProvider
-                        attribute="class"
-                        defaultTheme="system"
-                        enableSystem
-                        disableTransitionOnChange
-                    >
-                        {children}
-                    </ThemeProvider>
-                </ConvexClientProvider>
+                <AppProviders>{children}</AppProviders>
             </body>
         </html>
     );

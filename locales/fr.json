@@ -1,0 +1,274 @@
+{
+  "common": {
+    "loading": "Chargement...",
+    "error": "Erreur",
+    "success": "Succès",
+    "save": "Sauvegarder",
+    "cancel": "Annuler",
+    "download": "Télécharger",
+    "delete": "Supprimer",
+    "edit": "Modifier",
+    "create": "Créer",
+    "close": "Fermer",
+    "back": "Retour",
+    "next": "Suivant",
+    "previous": "Précédent",
+    "search": "Rechercher",
+    "filter": "Filtrer",
+    "sort": "Trier",
+    "yes": "Oui",
+    "no": "Non",
+    "ok": "OK",
+    "retry": "Réessayer",
+    "tryAgain": "Réessayer",
+    "processing": "Traitement",
+    "completed": "Terminé",
+    "failed": "Échoué",
+    "pending": "En attente",
+    "waiting": "En attente",
+    "uploading": "Téléchargement",
+    "preparing": "Préparation"
+  },
+  "header": {
+    "features": "Fonctionnalités",
+    "howItWorks": "Comment Ça Marche",
+    "pricing": "Tarifs",
+    "createWrappedImage": "Créer Mon Image Enveloppée",
+    "create": "Créer",
+    "profile": "Profil",
+    "credits": "Crédits",
+    "gallery": "Ma Galerie",
+    "creditBalance": "Solde de Crédits",
+    "logout": "Se Déconnecter"
+  },
+  "auth": {
+    "signInRequired": "Authentification Requise",
+    "pleaseSignIn": "Veuillez vous connecter pour voir votre profil.",
+    "signIn": "Se Connecter",
+    "signOut": "Se Déconnecter"
+  },
+  "generate": {
+    "pageTitle": "Créez Votre Image Enveloppée",
+    "pageSubtitle": "Téléchargez deux images et laissez l'IA faire la magie",
+    "step1Title": "Étape 1: Télécharger l'Objet",
+    "step2Title": "Étape 2: Télécharger le Matériau",
+    "clickToUpload": "Cliquez pour télécharger",
+    "object": "objet",
+    "material": "matériau",
+    "clear": "Effacer",
+    "wrapItNow": "Envelopper Maintenant",
+    "processing": "Traitement...",
+    "yourWrappedImageReady": "Votre Image Enveloppée est Prête! 🎉",
+    "heresYourWrappedDesign": "Voici votre design enveloppé professionnellement",
+    "beforeAfter": "Avant & Après",
+    "originalObject": "Objet Original",
+    "materialApplied": "Matériau Appliqué",
+    "finalResult": "✨ Résultat Final",
+    "downloadImage": "Télécharger l'Image",
+    "saveToGallery": "Sauvegarder dans la Galerie",
+    "createAnother": "Créer un Autre",
+    "creditsRemaining": "crédits restants",
+    "finalizing": "Finalisation de votre image enveloppée…",
+    "jobId": "ID de Tâche",
+    "uploadingImages": "Téléchargement des Images...",
+    "imagesBeingPrepared": "Vos images sont préparées pour le traitement",
+    "processStarted": "Processus Démarré",
+    "imageBeingCreated": "Votre image est créée. Ce processus prendra environ 25-40 secondes...",
+    "failedToCreateJob": "Échec de la création de tâche",
+    "settingResultImage": "Configuration de l'image résultat:",
+    "objectDropHint": "Cliquez ici ou faites glisser votre photo d'objet",
+    "materialDropHint": "Cliquez ici ou faites glisser votre photo de matériau",
+    "wrappedImageReady": "Votre image enveloppée est prête!",
+    "processFailed": "Processus Échoué",
+    "imagesCouldNotBeProcessed": "Vos images n'ont pas pu être traitées. Veuillez utiliser des images JPG ou PNG de haute qualité et réessayer.",
+    "downloaded": "Téléchargé!",
+    "wrappedImageDownloaded": "Votre image enveloppée a été téléchargée avec succès",
+    "downloadFailed": "Téléchargement Échoué",
+    "imageCouldNotBeDownloaded": "L'image n'a pas pu être téléchargée. Veuillez réessayer.",
+    "savedToGallery": "Sauvegardé dans la Galerie!",
+    "imageSavedToGallery": "Votre image a été sauvegardée dans votre galerie. Vous pouvez y accéder depuis votre page de profil.",
+    "saveFailed": "Sauvegarde Échouée",
+    "imageCouldNotBeSaved": "L'image n'a pas pu être sauvegardée. Veuillez réessayer.",
+    "preparingImages": "Préparation des Images...",
+    "creatingWrappedImage": "Création de l'Image Enveloppée...",
+    "imagesBeingUploaded": "Vos images sont téléchargées et préparées pour le traitement...",
+    "aiAnalyzingImages": "L'IA analyse vos images et applique l'enveloppe de matériau. Ce processus prend généralement 25-40 secondes.",
+    "waitingInQueue": "En Attente dans la File",
+    "chooseCategory": "Choisissez Votre Catégorie",
+    "selectObjectToWrap": "Sélectionnez le type d'objet que vous souhaitez envelopper"
+  },
+  "profile": {
+    "myImageGallery": "Ma Galerie d'Images",
+    "allWrappedImagesCreated": "Toutes les images enveloppées que vous avez créées",
+    "noImagesYet": "Pas Encore d'Images",
+    "goToGeneratePage": "Allez à la page Générer pour créer votre première image enveloppée",
+    "getStarted": "Commencer"
+  },
+  "footer": {
+    "poweredBy": "Propulsé par fal.ai SeeDream V4 Edit • Enveloppement de Véhicules IA Professionnel",
+    "ultraRealistic": "Ultra-réaliste • Qualité 8K • Photoréaliste"
+  },
+  "languageSwitcher": {
+    "changeLanguage": "Changer de langue"
+  },
+  "howItWorks": {
+    "title": "C'est Vraiment Aussi Simple",
+    "subtitle": "Juste trois étapes simples—aucune connaissance technique requise",
+    "bottomText": "C'est tout! Pas de paramètres compliqués ou de choses techniques.",
+    "tryNowFree": "ESSAYEZ GRATUITEMENT MAINTENANT",
+    "steps": {
+      "uploadObject": {
+        "title": "Téléchargez Votre Objet",
+        "description": "Prenez une photo de ce que vous voulez envelopper—une voiture, un mur, une table, ou autre chose. Téléchargez-la ici."
+      },
+      "uploadDesign": {
+        "title": "Téléchargez Votre Design",
+        "description": "Téléchargez une photo du matériau ou du motif que vous voulez—bois, fibre de carbone, ou toute texture."
+      },
+      "getResult": {
+        "title": "Obtenez Votre Résultat",
+        "description": "Attendez 30 secondes et votre image enveloppée est prête! Téléchargez-la et utilisez-la immédiatement."
+      }
+    }
+  },
+  "pricing": {
+    "title": "Commencez Gratuitement, Grandissez Selon Vos Besoins",
+    "subtitle": "Tout le monde obtient 3 enveloppements gratuits pour essayer. Aucune carte de crédit requise pour commencer!",
+    "tryNowFree": "ESSAYEZ GRATUITEMENT MAINTENANT",
+    "bottomText": "Tous les plans fonctionnent de la même manière—choisissez simplement combien d'enveloppements vous avez besoin. Les crédits n'expirent jamais et vous pouvez toujours en acheter plus après.",
+    "mostPopular": "Le Plus Populaire",
+    "getStarted": "Commencer",
+    "plans": {
+      "starter": {
+        "name": "Débutant",
+        "features": [
+          "10 enveloppements d'image",
+          "Téléchargements de haute qualité",
+          "Prêt en 30 secondes",
+          "Fonctionne sur n'importe quel objet"
+        ]
+      },
+      "professional": {
+        "name": "Professionnel",
+        "features": [
+          "25 enveloppements d'image",
+          "Téléchargements de haute qualité",
+          "Prêt en 30 secondes",
+          "Fonctionne sur n'importe quel objet",
+          "Support par email"
+        ]
+      },
+      "business": {
+        "name": "Entreprise",
+        "features": [
+          "100 enveloppements d'image",
+          "Téléchargements de haute qualité",
+          "Prêt en 30 secondes",
+          "Fonctionne sur n'importe quel objet",
+          "Support prioritaire par email",
+          "Parfait pour les équipes"
+        ]
+      }
+    }
+  },
+  "features": {
+    "title": "Simple mais Puissant",
+    "subtitle": "Tout ce dont vous avez besoin, rien que vous n'avez pas",
+    "tryNowFree": "ESSAYEZ GRATUITEMENT MAINTENANT",
+    "items": {
+      "worksOnAnything": {
+        "title": "Fonctionne sur Tout",
+        "description": "Voitures, murs, meubles, bâtiments—si vous pouvez le photographier, nous pouvons l'envelopper avec n'importe quel design"
+      },
+      "anyPatternOrTexture": {
+        "title": "N'importe Quel Motif ou Texture",
+        "description": "Enveloppements vinyle, grain de bois, fibre de carbone, marbre, métal—utilisez n'importe quelle photo de matériau que vous voulez"
+      },
+      "superFast": {
+        "title": "Super Rapide",
+        "description": "Vos résultats sont prêts en seulement 30 secondes. Pas d'attente—téléchargez et allez-y!"
+      },
+      "looksCompletelyReal": {
+        "title": "Semble Complètement Réel",
+        "description": "La forme reste parfaite tandis que le matériau s'enroule naturellement avec un éclairage et des ombres réalistes"
+      },
+      "easyToSave": {
+        "title": "Facile à Sauvegarder",
+        "description": "Téléchargez des images de haute qualité immédiatement. Partagez avec les clients ou utilisez-les comme vous en avez besoin"
+      },
+      "yourLanguage": {
+        "title": "Votre Langue",
+        "description": "Disponible en anglais, turc, espagnol, français et allemand—utilisez ce qui vous convient"
+      }
+    }
+  },
+  "categorySelector": {
+    "vehicle": "Enveloppement de Véhicule",
+    "furniture": "Enveloppement de Meubles",
+    "wall": "Revêtement de Mur",
+    "building": "Enveloppement de Bâtiment",
+    "electronics": "Peau d'Appareil",
+    "device": "Peau d'Appareil",
+    "box": "Enveloppement de Boîte",
+    "autoTuning": "Auto Tuning",
+    "generalItem": "Enveloppement d'Article Général"
+  }
+  ,
+  "upload": {
+    "categoryTitle": "Choisissez Votre Catégorie",
+    "categoryDescription": "Sélectionnez le type d'objet que vous souhaitez envelopper",
+    "objectPhoto": {
+      "title": "Étape 1 : Photo de Votre Objet",
+      "description": "Téléchargez une photo de votre voiture, mur, meuble ou tout ce que vous souhaitez envelopper",
+      "helpText": "Toute photo convient—assurez-vous que l'objet soit clairement visible"
+    },
+    "materialPhoto": {
+      "title": "Étape 2 : Photo de Votre Design",
+      "description": "Téléchargez une photo du matériau ou motif que vous souhaitez appliquer",
+      "helpText": "Bois, vinyle, fibre de carbone, marbre—toute texture que vous aimez"
+    },
+    "startCreating": "Commencer Maintenant"
+  },
+  "furnitureMaterialAnalysis": {
+    "title": "Analyse du Matériau de Meubles",
+    "uploadDescription": "Glissez et déposez votre image de matériau ici, ou cliquez pour sélectionner",
+    "supportedFormats": "Supporte JPG, PNG, WEBP jusqu'à 10Mo",
+    "analyze": "Analyser le Matériau",
+    "analyzing": "Analyse en cours...",
+    "edit": "Modifier les Résultats",
+    "reset": "Réinitialiser",
+    "results": "Résultats de l'Analyse",
+    "texture": "Analyse de la Texture",
+    "textureType": "Type de Texture",
+    "finish": "Finition de Surface",
+    "characteristics": "Caractéristiques du Matériau",
+    "color": "Analyse de la Couleur",
+    "primaryColor": "Couleur Primaire",
+    "secondaryColor": "Couleur Secondaire",
+    "colorPalette": "Palette de Couleurs",
+    "pattern": "Analyse du Motif",
+    "structure": "Structure du Motif",
+    "direction": "Direction du Motif",
+    "scale": "Échelle du Matériau",
+    "detail": "Niveau de Détail",
+    "confirm": "Confirmer l'Analyse",
+    "lighting": "Propriétés d'Éclairage",
+    "reflectivity": "Réflectivité",
+    "lightAbsorption": "Absorption de Lumière",
+    "shadowIntensity": "Intensité des Ombres",
+    "depthProperties": "Propriétés de Profondeur",
+    "woodGrainDepth": "Profondeur du Grain de Bois",
+    "fabricTextureDepth": "Profondeur de Texture du Tissu",
+    "leatherSheenLevel": "Niveau de Brillance du Cuir"
+  },
+  "furnitureSurfaceApplication": {
+    "title": "Application de Surface de Meubles",
+    "objectPreview": "Aperçu de l'Objet",
+    "materialPreview": "Aperçu du Matériau",
+    "applying": "Application...",
+    "applyMaterial": "Appliquer le Matériau",
+    "reset": "Réinitialiser",
+    "appliedProperties": "Propriétés Appliquées",
+    "needAnalysis": "Veuillez compléter l'analyse du matériau et télécharger les deux images"
+  }
+}

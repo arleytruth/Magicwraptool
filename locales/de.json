@@ -1,0 +1,274 @@
+{
+  "common": {
+    "loading": "Laden...",
+    "error": "Fehler",
+    "success": "Erfolg",
+    "save": "Speichern",
+    "cancel": "Abbrechen",
+    "download": "Herunterladen",
+    "delete": "Löschen",
+    "edit": "Bearbeiten",
+    "create": "Erstellen",
+    "close": "Schließen",
+    "back": "Zurück",
+    "next": "Weiter",
+    "previous": "Zurück",
+    "search": "Suchen",
+    "filter": "Filtern",
+    "sort": "Sortieren",
+    "yes": "Ja",
+    "no": "Nein",
+    "ok": "OK",
+    "retry": "Erneut versuchen",
+    "tryAgain": "Erneut versuchen",
+    "processing": "Verarbeitung",
+    "completed": "Abgeschlossen",
+    "failed": "Fehlgeschlagen",
+    "pending": "Ausstehend",
+    "waiting": "Warten",
+    "uploading": "Hochladen",
+    "preparing": "Vorbereitung"
+  },
+  "header": {
+    "features": "Funktionen",
+    "howItWorks": "Wie es funktioniert",
+    "pricing": "Preise",
+    "createWrappedImage": "Mein Umhülltes Bild erstellen",
+    "create": "Erstellen",
+    "profile": "Profil",
+    "credits": "Credits",
+    "gallery": "Meine Galerie",
+    "creditBalance": "Kreditguthaben",
+    "logout": "Abmelden"
+  },
+  "auth": {
+    "signInRequired": "Authentifizierung erforderlich",
+    "pleaseSignIn": "Bitte melden Sie sich an, um Ihr Profil zu sehen.",
+    "signIn": "Anmelden",
+    "signOut": "Abmelden"
+  },
+  "generate": {
+    "pageTitle": "Erstellen Sie Ihr Umhülltes Bild",
+    "pageSubtitle": "Laden Sie zwei Bilder hoch und lassen Sie die KI die Magie wirken",
+    "step1Title": "Schritt 1: Objekt hochladen",
+    "step2Title": "Schritt 2: Material hochladen",
+    "clickToUpload": "Zum Hochladen klicken",
+    "object": "Objekt",
+    "material": "Material",
+    "clear": "Löschen",
+    "wrapItNow": "Jetzt umhüllen",
+    "processing": "Verarbeitung...",
+    "yourWrappedImageReady": "Ihr Umhülltes Bild ist bereit! 🎉",
+    "heresYourWrappedDesign": "Hier ist Ihr professionell umhülltes Design",
+    "beforeAfter": "Vorher & Nachher",
+    "originalObject": "Originalobjekt",
+    "materialApplied": "Angewandtes Material",
+    "finalResult": "✨ Endergebnis",
+    "downloadImage": "Bild herunterladen",
+    "saveToGallery": "In Galerie speichern",
+    "createAnother": "Weiteres erstellen",
+    "creditsRemaining": "Credits übrig",
+    "finalizing": "Ihr umhülltes Bild wird fertiggestellt…",
+    "jobId": "Job-ID",
+    "uploadingImages": "Bilder werden hochgeladen...",
+    "imagesBeingPrepared": "Ihre Bilder werden für die Verarbeitung vorbereitet",
+    "processStarted": "Prozess gestartet",
+    "imageBeingCreated": "Ihr Bild wird erstellt. Dieser Prozess dauert etwa 25-40 Sekunden...",
+    "failedToCreateJob": "Job konnte nicht erstellt werden",
+    "settingResultImage": "Ergebnisbild wird eingestellt:",
+    "objectDropHint": "Klicke hier oder ziehe dein Objektfoto herein",
+    "materialDropHint": "Klicke hier oder ziehe dein Materialfoto herein",
+    "wrappedImageReady": "Ihr umhülltes Bild ist bereit!",
+    "processFailed": "Prozess fehlgeschlagen",
+    "imagesCouldNotBeProcessed": "Ihre Bilder konnten nicht verarbeitet werden. Bitte verwenden Sie hochqualitative JPG- oder PNG-Bilder und versuchen Sie es erneut.",
+    "downloaded": "Heruntergeladen!",
+    "wrappedImageDownloaded": "Ihr umhülltes Bild wurde erfolgreich heruntergeladen",
+    "downloadFailed": "Download fehlgeschlagen",
+    "imageCouldNotBeDownloaded": "Bild konnte nicht heruntergeladen werden. Bitte versuchen Sie es erneut.",
+    "savedToGallery": "In Galerie gespeichert!",
+    "imageSavedToGallery": "Ihr Bild wurde in Ihrer Galerie gespeichert. Sie können über Ihre Profilseite darauf zugreifen.",
+    "saveFailed": "Speichern fehlgeschlagen",
+    "imageCouldNotBeSaved": "Bild konnte nicht gespeichert werden. Bitte versuchen Sie es erneut.",
+    "preparingImages": "Bilder werden vorbereitet...",
+    "creatingWrappedImage": "Umhülltes Bild wird erstellt...",
+    "imagesBeingUploaded": "Ihre Bilder werden hochgeladen und für die Verarbeitung vorbereitet...",
+    "aiAnalyzingImages": "KI analysiert Ihre Bilder und wendet die Materialumhüllung an. Dieser Prozess dauert normalerweise 25-40 Sekunden.",
+    "waitingInQueue": "Warten in der Warteschlange",
+    "chooseCategory": "Wählen Sie Ihre Kategorie",
+    "selectObjectToWrap": "Wählen Sie aus, welchen Objekttyp Sie umhüllen möchten"
+  },
+  "profile": {
+    "myImageGallery": "Meine Bildergalerie",
+    "allWrappedImagesCreated": "Alle umhüllten Bilder, die Sie erstellt haben",
+    "noImagesYet": "Noch keine Bilder",
+    "goToGeneratePage": "Gehen Sie zur Generieren-Seite, um Ihr erstes umhülltes Bild zu erstellen",
+    "getStarted": "Loslegen"
+  },
+  "footer": {
+    "poweredBy": "Unterstützt von fal.ai SeeDream V4 Edit • Professionelle KI-Fahrzeugumhüllung",
+    "ultraRealistic": "Ultra-realistisch • 8K-Qualität • Fotorealistisch"
+  },
+  "languageSwitcher": {
+    "changeLanguage": "Sprache ändern"
+  },
+  "howItWorks": {
+    "title": "Es Ist Wirklich So Einfach",
+    "subtitle": "Nur drei einfache Schritte—kein technisches Wissen erforderlich",
+    "bottomText": "Das ist alles! Keine komplizierten Einstellungen oder technischen Dinge.",
+    "tryNowFree": "JETZT KOSTENLOS TESTEN",
+    "steps": {
+      "uploadObject": {
+        "title": "Laden Sie Ihr Objekt Hoch",
+        "description": "Machen Sie ein Foto von dem, was Sie umhüllen wollen—ein Auto, eine Wand, ein Tisch oder etwas anderes. Laden Sie es hier hoch."
+      },
+      "uploadDesign": {
+        "title": "Laden Sie Ihr Design Hoch",
+        "description": "Laden Sie ein Foto des Materials oder Musters hoch, das Sie wollen—Holz, Kohlefaser oder jede Textur."
+      },
+      "getResult": {
+        "title": "Erhalten Sie Ihr Ergebnis",
+        "description": "Warten Sie 30 Sekunden und Ihr umhülltes Bild ist fertig! Laden Sie es herunter und verwenden Sie es sofort."
+      }
+    }
+  },
+  "pricing": {
+    "title": "Beginnen Sie Kostenlos, Wachsen Sie Nach Ihren Bedürfnissen",
+    "subtitle": "Jeder erhält 3 kostenlose Umhüllungen zum Ausprobieren. Keine Kreditkarte erforderlich, um zu starten!",
+    "tryNowFree": "JETZT KOSTENLOS TESTEN",
+    "bottomText": "Alle Pläne funktionieren auf die gleiche Weise—wählen Sie einfach, wie viele Umhüllungen Sie brauchen. Credits verfallen nie und Sie können immer später mehr kaufen.",
+    "mostPopular": "Am Beliebtesten",
+    "getStarted": "Loslegen",
+    "plans": {
+      "starter": {
+        "name": "Anfänger",
+        "features": [
+          "10 Bildumhüllungen",
+          "Hochwertige Downloads",
+          "Bereit in 30 Sekunden",
+          "Funktioniert auf jedem Objekt"
+        ]
+      },
+      "professional": {
+        "name": "Professionell",
+        "features": [
+          "25 Bildumhüllungen",
+          "Hochwertige Downloads",
+          "Bereit in 30 Sekunden",
+          "Funktioniert auf jedem Objekt",
+          "E-Mail-Support"
+        ]
+      },
+      "business": {
+        "name": "Geschäftlich",
+        "features": [
+          "100 Bildumhüllungen",
+          "Hochwertige Downloads",
+          "Bereit in 30 Sekunden",
+          "Funktioniert auf jedem Objekt",
+          "Priorisierter E-Mail-Support",
+          "Perfekt für Teams"
+        ]
+      }
+    }
+  },
+  "features": {
+    "title": "Einfach aber Mächtig",
+    "subtitle": "Alles was Sie brauchen, nichts was Sie nicht brauchen",
+    "tryNowFree": "JETZT KOSTENLOS TESTEN",
+    "items": {
+      "worksOnAnything": {
+        "title": "Funktioniert auf Allem",
+        "description": "Autos, Wände, Möbel, Gebäude—wenn Sie es fotografieren können, können wir es mit jedem Design umhüllen"
+      },
+      "anyPatternOrTexture": {
+        "title": "Jedes Muster oder jede Textur",
+        "description": "Vinylfolien, Holzmaserung, Kohlefaser, Marmor, Metall—verwenden Sie jedes gewünschte Materialfoto"
+      },
+      "superFast": {
+        "title": "Super Schnell",
+        "description": "Ihre Ergebnisse sind in nur 30 Sekunden fertig. Kein Warten—hochladen und los!"
+      },
+      "looksCompletelyReal": {
+        "title": "Sieht Vollkommen Real Aus",
+        "description": "Die Form bleibt perfekt während das Material sich mit realistischer Beleuchtung und Schatten natürlich umhüllt"
+      },
+      "easyToSave": {
+        "title": "Einfach zu Speichern",
+        "description": "Laden Sie sofort hochqualitative Bilder herunter. Teilen Sie mit Kunden oder verwenden Sie sie wie Sie möchten"
+      },
+      "yourLanguage": {
+        "title": "Ihre Sprache",
+        "description": "Verfügbar in Englisch, Türkisch, Spanisch, Französisch und Deutsch—verwenden Sie was Ihnen angenehm ist"
+      }
+    }
+  },
+  "categorySelector": {
+    "vehicle": "Fahrzeugfolierung",
+    "furniture": "Möbelverkleidung",
+    "wall": "Wandverkleidung",
+    "building": "Gebäudefolierung",
+    "electronics": "Gerätehülle",
+    "device": "Gerätehülle",
+    "box": "Kartonverpackung",
+    "autoTuning": "Auto Tuning",
+    "generalItem": "Allgemeine Artikelverpackung"
+  }
+  ,
+  "upload": {
+    "categoryTitle": "Wählen Sie Ihre Kategorie",
+    "categoryDescription": "Wählen Sie aus, welchen Objekttyp Sie folieren möchten",
+    "objectPhoto": {
+      "title": "Schritt 1: Ihr Objektfoto",
+      "description": "Laden Sie ein Foto Ihres Autos, Ihrer Wand, Ihrer Möbel oder eines beliebigen Objekts hoch",
+      "helpText": "Jedes Foto funktioniert—stellen Sie sicher, dass das Objekt klar sichtbar ist"
+    },
+    "materialPhoto": {
+      "title": "Schritt 2: Ihr Designfoto",
+      "description": "Laden Sie ein Foto des Materials oder Musters hoch, das Sie anwenden möchten",
+      "helpText": "Holz, Vinyl, Kohlefaser, Marmor—jede Textur, die Ihnen gefällt"
+    },
+    "startCreating": "Jetzt Starten"
+  },
+  "furnitureMaterialAnalysis": {
+    "title": "Möbelmaterialanalyse",
+    "uploadDescription": "Ziehen Sie Ihr Materialbild hierher oder klicken Sie zum Auswählen",
+    "supportedFormats": "Unterstützt JPG, PNG, WEBP bis zu 10MB",
+    "analyze": "Material analysieren",
+    "analyzing": "Analyse läuft...",
+    "edit": "Ergebnisse bearbeiten",
+    "reset": "Zurücksetzen",
+    "results": "Analyseergebnisse",
+    "texture": "Texturanalyse",
+    "textureType": "Texturtyp",
+    "finish": "Oberflächenveredelung",
+    "characteristics": "Materialeigenschaften",
+    "color": "Farbanalyse",
+    "primaryColor": "Primärfarbe",
+    "secondaryColor": "Sekundärfarbe",
+    "colorPalette": "Farbpalette",
+    "pattern": "Musteranalyse",
+    "structure": "Musterstruktur",
+    "direction": "Musterichtung",
+    "scale": "Materialskala",
+    "detail": "Detailgrad",
+    "confirm": "Analyse bestätigen",
+    "lighting": "Beleuchtungseigenschaften",
+    "reflectivity": "Reflexion",
+    "lightAbsorption": "Lichtabsorption",
+    "shadowIntensity": "Schattenintensität",
+    "depthProperties": "Tiefeneigenschaften",
+    "woodGrainDepth": "Holzfaser-Tiefe",
+    "fabricTextureDepth": "Stofftextur-Tiefe",
+    "leatherSheenLevel": "Leder-Glanzgrad"
+  },
+  "furnitureSurfaceApplication": {
+    "title": "Möbeloberflächenanwendung",
+    "objectPreview": "Objektvorschau",
+    "materialPreview": "Materialvorschau",
+    "applying": "Anwenden...",
+    "applyMaterial": "Material anwenden",
+    "reset": "Zurücksetzen",
+    "appliedProperties": "Angewandte Eigenschaften",
+    "needAnalysis": "Bitte schließen Sie die Materialanalyse ab und laden Sie beide Bilder hoch"
+  }
+}

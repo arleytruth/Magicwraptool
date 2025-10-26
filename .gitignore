@@ -36,3 +36,11 @@ yarn-error.log*
 next-env.d.ts
 
 .env.local
+
+# Sanity
+.sanity
+
+# Test files
+test-webhook.js
+stripe.tar.gz
+

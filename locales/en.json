@@ -1,0 +1,300 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "save": "Save",
+    "cancel": "Cancel",
+    "download": "Download",
+    "delete": "Delete",
+    "edit": "Edit",
+    "create": "Create",
+    "close": "Close",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "search": "Search",
+    "filter": "Filter",
+    "sort": "Sort",
+    "yes": "Yes",
+    "no": "No",
+    "ok": "OK",
+    "retry": "Retry",
+    "tryAgain": "Try Again",
+    "processing": "Processing",
+    "completed": "Completed",
+    "failed": "Failed",
+    "pending": "Pending",
+    "waiting": "Waiting",
+    "uploading": "Uploading",
+    "preparing": "Preparing"
+  },
+  "header": {
+    "features": "Features",
+    "howItWorks": "How It Works",
+    "pricing": "Pricing",
+    "createWrappedImage": "Create My Wrapped Image",
+    "create": "Create",
+    "profile": "Profile",
+    "credits": "Credits",
+    "gallery": "My Gallery",
+    "creditBalance": "Credit Balance",
+    "logout": "Logout"
+  },
+  "auth": {
+    "signInRequired": "Authentication Required",
+    "pleaseSignIn": "Please sign in to view your profile.",
+    "signIn": "Sign In",
+    "signOut": "Sign Out"
+  },
+  "generate": {
+    "pageTitle": "Create Your Wrapped Image",
+    "pageSubtitle": "Upload two images and let AI do the magic",
+    "step1Title": "Step 1: Upload Object",
+    "step2Title": "Step 2: Upload Material",
+    "clickToUpload": "Click to upload",
+    "object": "object",
+    "material": "material",
+    "clear": "Clear",
+    "wrapItNow": "Wrap It Now",
+    "processing": "Processing...",
+    "yourWrappedImageReady": "Your Wrapped Image is Ready! 🎉",
+    "heresYourWrappedDesign": "Here's your professionally wrapped design",
+    "beforeAfter": "Before & After",
+    "originalObject": "Original Object",
+    "materialApplied": "Material Applied",
+    "finalResult": "✨ Final Result",
+    "downloadImage": "Download Image",
+    "saveToGallery": "Save to Gallery",
+    "createAnother": "Create Another",
+    "creditsRemaining": "credits remaining",
+    "finalizing": "Finalizing your wrapped image…",
+    "jobId": "Job ID",
+    "uploadingImages": "Uploading Images...",
+    "imagesBeingPrepared": "Your images are being prepared for processing",
+    "processStarted": "Process Started",
+    "imageBeingCreated": "Your image is being created. This process will take approximately 25-40 seconds...",
+    "failedToCreateJob": "Failed to create job",
+    "settingResultImage": "Setting result image:",
+    "objectDropHint": "Click or drag your object photo here",
+    "materialDropHint": "Click or drag your material photo here",
+    "wrappedImageReady": "Your wrapped image is ready!",
+    "processFailed": "Process Failed",
+    "imagesCouldNotBeProcessed": "Your images could not be processed. Please use high-quality JPG or PNG images and try again.",
+    "downloaded": "Downloaded!",
+    "wrappedImageDownloaded": "Your wrapped image has been downloaded successfully",
+    "downloadFailed": "Download Failed",
+    "imageCouldNotBeDownloaded": "Image could not be downloaded. Please try again.",
+    "savedToGallery": "Saved to Gallery!",
+    "imageSavedToGallery": "Your image has been saved to your gallery. You can access it from your profile page.",
+    "saveFailed": "Save Failed",
+    "imageCouldNotBeSaved": "Image could not be saved. Please try again.",
+    "preparingImages": "Preparing Images...",
+    "creatingWrappedImage": "Creating Wrapped Image...",
+    "imagesBeingUploaded": "Your images are being uploaded and prepared for processing...",
+    "aiAnalyzingImages": "AI is analyzing your images and applying the material wrap. This process usually takes 25-40 seconds.",
+    "waitingInQueue": "Waiting in Queue",
+    "chooseCategory": "Choose Your Category",
+    "selectObjectToWrap": "Select what type of object you want to wrap"
+  },
+  "profile": {
+    "memberSince": "Member since",
+    "freeAccount": "Free Account",
+    "usageStatistics": "Usage Statistics",
+    "usageDescription": "Track how your credits and generations are performing.",
+    "totalImagesGenerated": "Total Images Generated",
+    "totalCreditsUsed": "Total Credits Used",
+    "mostUsedCategory": "Most Used Category",
+    "lastGeneration": "Last Generation",
+    "noCategoryData": "No category data yet",
+    "noGenerations": "No generations yet",
+    "creditBalance": "Credit Balance",
+    "currentBalance": "Current Balance",
+    "addCredits": "Add Credits",
+    "manageCredits": "Top up your credits to keep generating results.",
+    "creditTopUpOptions": "Credit Top-Up Options",
+    "chooseCreditPackage": "Choose a credit package that fits your needs",
+    "credits": "credits",
+    "creditsLower": "credits",
+    "imageGenerations": "image generations",
+    "buyNow": "Buy Now",
+    "savePercentage": "Save {{percentage}}%",
+    "fastProcessing": "Fast processing in under 30 seconds",
+    "prioritySupport": "Priority support included",
+    "recommendedPackage": "Recommended package for consistent usage",
+    "resultImageAlt": "Generated wrap result image",
+    "objectImageAlt": "Original object image",
+    "materialImageAlt": "Material image",
+    "myImageGallery": "My Image Gallery",
+    "allWrappedImagesCreated": "All the wrapped images you've created",
+    "noImagesYet": "No Images Yet",
+    "goToGeneratePage": "Go to the Generate page to create your first wrapped image",
+    "getStarted": "Get Started"
+  },
+  "footer": {
+    "poweredBy": "Powered by fal.ai SeeDream V4 Edit • Professional AI Vehicle Wrapping",
+    "ultraRealistic": "Ultra-realistic • 8K Quality • Photorealistic"
+  },
+  "languageSwitcher": {
+    "changeLanguage": "Change language"
+  },
+  "features": {
+    "title": "Simple but Powerful",
+    "subtitle": "Everything you need, nothing you don't",
+    "tryNowFree": "TRY NOW FREE",
+    "items": {
+      "worksOnAnything": {
+        "title": "Works on Anything",
+        "description": "Cars, walls, furniture, buildings—if you can photograph it, we can wrap it with any design"
+      },
+      "anyPatternOrTexture": {
+        "title": "Any Pattern or Texture",
+        "description": "Vinyl wraps, wood grain, carbon fiber, marble, metal—use any material photo you want"
+      },
+      "superFast": {
+        "title": "Super Fast",
+        "description": "Your results are ready in just 30 seconds. No waiting around—upload and go!"
+      },
+      "looksCompletelyReal": {
+        "title": "Looks Completely Real",
+        "description": "The shape stays perfect while the material wraps naturally with realistic lighting and shadows"
+      },
+      "easyToSave": {
+        "title": "Easy to Save",
+        "description": "Download high-quality images right away. Share with clients or use them however you need"
+      },
+      "yourLanguage": {
+        "title": "Your Language",
+        "description": "Available in English, Turkish, Spanish, French, and German—use what's comfortable for you"
+      }
+    }
+  },
+  "categorySelector": {
+    "vehicle": "Vehicle Wrap",
+    "furniture": "Furniture Wrap",
+    "wall": "Wall Covering",
+    "building": "Building Wrap",
+    "electronics": "Device Skin",
+    "device": "Device Skin",
+    "box": "Box Wrapping",
+    "autoTuning": "Auto Tuning",
+    "generalItem": "General Item Wrapping"
+  },
+  "furnitureMaterialAnalysis": {
+    "title": "Furniture Material Analysis",
+    "uploadDescription": "Drag and drop your material image here, or click to select",
+    "supportedFormats": "Supports JPG, PNG, WEBP up to 10MB",
+    "analyze": "Analyze Material",
+    "analyzing": "Analyzing...",
+    "edit": "Edit Results",
+    "reset": "Reset",
+    "results": "Analysis Results",
+    "texture": "Texture Analysis",
+    "textureType": "Texture Type",
+    "finish": "Surface Finish",
+    "characteristics": "Material Characteristics",
+    "color": "Color Analysis",
+    "primaryColor": "Primary Color",
+    "secondaryColor": "Secondary Color",
+    "colorPalette": "Color Palette",
+    "pattern": "Pattern Analysis",
+    "structure": "Pattern Structure",
+    "direction": "Pattern Direction",
+    "scale": "Material Scale",
+    "detail": "Detail Level",
+    "confirm": "Confirm Analysis",
+    "lighting": "Lighting Properties",
+    "reflectivity": "Reflectivity",
+    "lightAbsorption": "Light Absorption",
+    "shadowIntensity": "Shadow Intensity",
+    "depthProperties": "Depth Properties",
+    "woodGrainDepth": "Wood Grain Depth",
+    "fabricTextureDepth": "Fabric Texture Depth",
+    "leatherSheenLevel": "Leather Sheen Level"
+  },
+  "furnitureSurfaceApplication": {
+    "title": "Furniture Surface Application",
+    "objectPreview": "Object Preview",
+    "materialPreview": "Material Preview",
+    "applying": "Applying...",
+    "applyMaterial": "Apply Material",
+    "reset": "Reset",
+    "appliedProperties": "Applied Properties",
+    "needAnalysis": "Please complete material analysis and upload both object and material images"
+  },
+  "upload": {
+    "categoryTitle": "Choose Your Category",
+    "categoryDescription": "Select what type of object you want to wrap",
+    "objectPhoto": {
+      "title": "Step 1: Your Object Photo",
+      "description": "Upload a photo of your car, wall, furniture, or anything you want to wrap",
+      "helpText": "Any photo works—just make sure the object is clearly visible"
+    },
+    "materialPhoto": {
+      "title": "Step 2: Your Design Photo",
+      "description": "Upload a photo of the material or pattern you want to apply",
+      "helpText": "Wood, vinyl, carbon fiber, marble—any texture you like"
+    },
+    "startCreating": "Start Creating Now"
+  },
+  "howItWorks": {
+    "title": "It's Really This Easy",
+    "subtitle": "Just three simple steps—no technical knowledge needed",
+    "bottomText": "That's it! No complicated settings or technical stuff.",
+    "tryNowFree": "TRY NOW FREE",
+    "steps": {
+      "uploadObject": {
+        "title": "Upload Your Object",
+        "description": "Take a photo of what you want to wrap—a car, wall, table, or anything else. Upload it here."
+      },
+      "uploadDesign": {
+        "title": "Upload Your Design",
+        "description": "Upload a photo of the material or pattern you want—wood, carbon fiber, or any texture."
+      },
+      "getResult": {
+        "title": "Get Your Result",
+        "description": "Wait 30 seconds and your wrapped image is ready! Download it and use it right away."
+      }
+    }
+  },
+  "pricing": {
+    "title": "Start Free, Grow as You Need",
+    "subtitle": "Everyone gets 3 free wraps to try. No credit card needed to start!",
+    "tryNowFree": "TRY NOW FREE",
+    "bottomText": "All plans work the same way—just choose how many wraps you need. Credits never expire and you can always buy more later.",
+    "mostPopular": "Most Popular",
+    "getStarted": "Get Started",
+    "plans": {
+      "starter": {
+        "name": "Starter",
+        "features": [
+          "10 image wraps",
+          "High-quality downloads",
+          "Ready in 30 seconds",
+          "Works on any object"
+        ]
+      },
+      "professional": {
+        "name": "Professional",
+        "features": [
+          "25 image wraps",
+          "High-quality downloads",
+          "Ready in 30 seconds",
+          "Works on any object",
+          "Email support"
+        ]
+      },
+      "business": {
+        "name": "Business",
+        "features": [
+          "100 image wraps",
+          "High-quality downloads",
+          "Ready in 30 seconds",
+          "Works on any object",
+          "Priority email support",
+          "Perfect for teams"
+        ]
+      }
+    }
+  }
+}
