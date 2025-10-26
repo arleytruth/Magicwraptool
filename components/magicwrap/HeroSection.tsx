@@ -124,11 +124,12 @@ export function HeroSection() {
               onTouchMove={handleTouchMove}
             >
               {/* Before Image (Background) */}
-              <div className="absolute inset-0">
+              <div className="absolute inset-0" style={{ willChange: 'auto' }}>
                 <img
                   src="/hero-after.png"
                   alt="Önce - Orijinal Görsel"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover pointer-events-none"
+                  draggable="false"
                   loading="eager"
                   fetchPriority="high"
                   onError={(e) => {
@@ -142,12 +143,16 @@ export function HeroSection() {
               {/* After Image (Overlay) */}
               <div
                 className="absolute inset-0"
-                style={{ clipPath: `inset(0 ${100 - sliderPosition}% 0 0)` }}
+                style={{ 
+                  clipPath: `inset(0 ${100 - sliderPosition}% 0 0)`,
+                  willChange: isDragging ? 'clip-path' : 'auto'
+                }}
               >
                 <img
                   src="/hero-before.jpg"
                   alt="Sonra - Kaplı Görsel"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover pointer-events-none"
+                  draggable="false"
                   loading="eager"
                   fetchPriority="high"
                   onError={(e) => {
@@ -160,25 +165,28 @@ export function HeroSection() {
 
               {/* Slider Handle */}
               <div
-                className="absolute top-0 bottom-0 w-1 bg-white shadow-lg"
-                style={{ left: `${sliderPosition}%` }}
+                className="absolute top-0 bottom-0 w-1 bg-white shadow-lg pointer-events-none"
+                style={{ 
+                  left: `${sliderPosition}%`,
+                  transition: isDragging ? 'none' : 'left 0.1s ease-out'
+                }}
               >
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 bg-white rounded-full shadow-xl flex items-center justify-center border-2 border-primary">
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 bg-white rounded-full shadow-xl flex items-center justify-center border-2 border-primary pointer-events-none">
                   <MoveHorizontal className="h-5 w-5 text-primary" />
                 </div>
               </div>
 
               {/* Labels */}
-              <div className="absolute top-4 left-4 bg-black/50 backdrop-blur-sm text-white px-3 py-1.5 rounded-full text-xs sm:text-sm font-semibold">
+              <div className="absolute top-4 left-4 bg-black/50 backdrop-blur-sm text-white px-3 py-1.5 rounded-full text-xs sm:text-sm font-semibold pointer-events-none select-none">
                 Önce
               </div>
-              <div className="absolute top-4 right-4 bg-black/50 backdrop-blur-sm text-white px-3 py-1.5 rounded-full text-xs sm:text-sm font-semibold">
+              <div className="absolute top-4 right-4 bg-black/50 backdrop-blur-sm text-white px-3 py-1.5 rounded-full text-xs sm:text-sm font-semibold pointer-events-none select-none">
                 Sonra
               </div>
 
               {/* Drag Hint */}
-              {sliderPosition === 50 && (
-                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-primary/90 backdrop-blur-sm text-primary-foreground px-4 py-2 rounded-full text-xs sm:text-sm font-medium shadow-lg animate-pulse">
+              {sliderPosition === 50 && !isDragging && (
+                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-primary/90 backdrop-blur-sm text-primary-foreground px-4 py-2 rounded-full text-xs sm:text-sm font-medium shadow-lg animate-pulse pointer-events-none">
                   ← Sürükle →
                 </div>
               )}
