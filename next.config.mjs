@@ -22,10 +22,16 @@ const nextConfig = {
     // Netlify için optimize edilmiş ayarlar
     output: 'standalone',
     eslint: {
-        ignoreDuringBuilds: true, // Deployment hızlandırma (opsiyonel)
+        ignoreDuringBuilds: true,
     },
     typescript: {
-        ignoreBuildErrors: false, // Type hatalarını kontrol et
+        ignoreBuildErrors: false,
+    },
+    // macOS network hatası için
+    experimental: {
+        serverActions: {
+            bodySizeLimit: '2mb',
+        },
     },
 };
 
