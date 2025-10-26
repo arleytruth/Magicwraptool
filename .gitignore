@@ -47,3 +47,7 @@ stripe.tar.gz
 # React Bricks (disabled)
 magicwrap.disabled/
 
+# MCP Configuration (may contain PAT)
+.cursormcp
+mcp.json
+
