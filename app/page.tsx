@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import { HeroSection } from "@/components/magicwrap/HeroSection";
 import { FeatureGrid } from "@/components/magicwrap/FeatureGrid";
 import { HowItWorks } from "@/components/magicwrap/HowItWorks";
@@ -15,13 +16,15 @@ export default function HomePage() {
             <Header />
             <main className="flex-1">
                 <HeroSection />
-                <FeatureGrid />
-                <HowItWorks />
-                <BeforeAfterShowcase />
-                <WhoIsThisFor />
-                <EasyAndPowerful />
-                <UploadSection />
-                <PricingSection />
+                <Suspense fallback={<div className="min-h-screen" />}>
+                    <FeatureGrid />
+                    <HowItWorks />
+                    <BeforeAfterShowcase />
+                    <WhoIsThisFor />
+                    <EasyAndPowerful />
+                    <UploadSection />
+                    <PricingSection />
+                </Suspense>
             </main>
             <Footer />
         </div>
