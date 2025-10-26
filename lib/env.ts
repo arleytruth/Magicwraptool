@@ -34,6 +34,13 @@ const serverSchema = z.object({
     NETLIFY_SITE_URL: z.string().optional(),
 });
 
+// Helper to remove undefined values so Zod defaults work correctly
+const cleanEnv = <T extends Record<string, any>>(obj: T): Partial<T> => {
+    return Object.fromEntries(
+        Object.entries(obj).filter(([_, v]) => v !== undefined)
+    ) as Partial<T>;
+};
+
 const _publicEnv = {
     NEXT_PUBLIC_SITE_URL: process.env.NEXT_PUBLIC_SITE_URL,
     NEXT_PUBLIC_CONVEX_URL: process.env.NEXT_PUBLIC_CONVEX_URL,
@@ -57,8 +64,9 @@ const _serverEnv = {
     NETLIFY_SITE_URL: process.env.NETLIFY_SITE_URL,
 };
 
-export const publicEnv = publicSchema.parse(_publicEnv);
-export const serverEnv = serverSchema.parse(_serverEnv);
+// Clean undefined values before parsing so Zod defaults work
+export const publicEnv = publicSchema.parse(cleanEnv(_publicEnv));
+export const serverEnv = serverSchema.parse(cleanEnv(_serverEnv));
 
 export const env = {
     ...publicEnv,
