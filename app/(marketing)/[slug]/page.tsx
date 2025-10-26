@@ -4,6 +4,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { PortableText } from "@portabletext/react";
+import type {
+    PortableTextComponentProps,
+    PortableTextComponents,
+    PortableTextMarkComponentProps,
+} from "@portabletext/react";
 
 import { Button } from "@/components/ui/button";
 import { getAllPages, getPageBySlug } from "@/lib/sanity/queries";
@@ -11,7 +16,7 @@ import { cn } from "@/lib/utils";
 import { urlFor } from "@/sanity/lib/image";
 
 type Props = {
-    params: { slug: string };
+    params: Promise<{ slug: string }>;
 };
 
 const heroBackgroundVariants: Record<string, string> = {
@@ -49,7 +54,7 @@ function buildOgImage(page: any) {
 
 // Metadata oluştur
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-    const { slug } = params;
+    const { slug } = await params;
     const page = await getPageBySlug(slug);
 
     if (!page) {
@@ -97,7 +102,7 @@ export const revalidate = 0;
 export const dynamic = "force-dynamic";
 
 export default async function DynamicPage({ params }: Props) {
-    const { slug } = params;
+    const { slug } = await params;
     const page = await getPageBySlug(slug);
 
     if (!page) {
@@ -115,58 +120,59 @@ export default async function DynamicPage({ params }: Props) {
               })()
             : null;
 
-    const portableComponents = {
+    const portableComponents: PortableTextComponents = {
         block: {
-            h1: ({ children }: { children: ReactNode }) => (
+            h1: ({ children }: PortableTextComponentProps<any>) => (
                 <h2 className="mt-12 mb-6 text-3xl font-bold tracking-tight text-foreground">
-                    {children}
+                    {children ?? null}
                 </h2>
             ),
-            h2: ({ children }: { children: ReactNode }) => (
+            h2: ({ children }: PortableTextComponentProps<any>) => (
                 <h3 className="mt-10 mb-4 text-2xl font-semibold tracking-tight text-foreground">
-                    {children}
+                    {children ?? null}
                 </h3>
             ),
-            h3: ({ children }: { children: ReactNode }) => (
+            h3: ({ children }: PortableTextComponentProps<any>) => (
                 <h4 className="mt-8 mb-3 text-xl font-semibold tracking-tight text-foreground">
-                    {children}
+                    {children ?? null}
                 </h4>
             ),
-            normal: ({ children }: { children: ReactNode }) => (
-                <p className="mb-4 leading-relaxed text-muted-foreground">{children}</p>
+            normal: ({ children }: PortableTextComponentProps<any>) => (
+                <p className="mb-4 leading-relaxed text-muted-foreground">
+                    {children ?? null}
+                </p>
             ),
-            blockquote: ({ children }: { children: ReactNode }) => (
+            blockquote: ({ children }: PortableTextComponentProps<any>) => (
                 <blockquote className="my-6 border-l-4 border-primary/50 pl-5 italic text-muted-foreground">
-                    {children}
+                    {children ?? null}
                 </blockquote>
             ),
         },
         list: {
-            bullet: ({ children }: { children: ReactNode }) => (
+            bullet: ({ children }: PortableTextComponentProps<any>) => (
                 <ul className="mb-6 list-disc space-y-2 pl-6 text-muted-foreground">
-                    {children}
+                    {children ?? null}
                 </ul>
             ),
-            number: ({ children }: { children: ReactNode }) => (
+            number: ({ children }: PortableTextComponentProps<any>) => (
                 <ol className="mb-6 list-decimal space-y-2 pl-6 text-muted-foreground">
-                    {children}
+                    {children ?? null}
                 </ol>
             ),
         },
         marks: {
-            strong: ({ children }: { children: ReactNode }) => (
-                <strong className="font-semibold text-foreground">{children}</strong>
+            strong: ({ children }: PortableTextMarkComponentProps<any>) => (
+                <strong className="font-semibold text-foreground">
+                    {children ?? null}
+                </strong>
             ),
-            em: ({ children }: { children: ReactNode }) => (
-                <em className="italic text-foreground">{children}</em>
+            em: ({ children }: PortableTextMarkComponentProps<any>) => (
+                <em className="italic text-foreground">{children ?? null}</em>
             ),
             link: ({
                 value,
                 children,
-            }: {
-                value?: { href?: string; openInNewTab?: boolean };
-                children: ReactNode;
-            }) => {
+            }: PortableTextMarkComponentProps<any>) => {
                 const href = value?.href ?? "#";
                 const isExternal = href.startsWith("http");
                 const target = value?.openInNewTab || isExternal ? "_blank" : undefined;
@@ -177,7 +183,7 @@ export default async function DynamicPage({ params }: Props) {
                         rel={target === "_blank" ? "noopener noreferrer" : undefined}
                         className="font-medium text-primary underline-offset-4 hover:underline"
                     >
-                        {children}
+                        {children ?? null}
                     </a>
                 );
             },

@@ -1,8 +1,8 @@
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 import { getAuth } from "@clerk/nextjs/server";
 import { createSupabaseServiceRoleClient } from "@/lib/supabase/server";
 
-export async function GET(request: Request) {
+export async function GET(request: NextRequest) {
   try {
     const { userId } = await getAuth(request);
 
@@ -69,4 +69,3 @@ export async function GET(request: Request) {
     );
   }
 }
-

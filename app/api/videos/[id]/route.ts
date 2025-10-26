@@ -7,7 +7,7 @@ export const runtime = "nodejs";
 // GET - Get specific video generation
 export async function GET(
     request: Request,
-    { params }: { params: { id: string } },
+    { params }: { params: Promise<{ id: string }> },
 ) {
     try {
         const { userId } = auth();
@@ -15,7 +15,8 @@ export async function GET(
             return NextResponse.json({ message: "Unauthorized" }, { status: 401 });
         }
 
-        const videoGeneration = await getVideoGeneration(params.id);
+        const { id } = await params;
+        const videoGeneration = await getVideoGeneration(id);
 
         if (!videoGeneration) {
             return NextResponse.json(
@@ -33,4 +34,3 @@ export async function GET(
         );
     }
 }
-

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
 import {
@@ -31,7 +31,7 @@ const formatDateTime = (value: string | null) => {
     }
 };
 
-const Dashboard = () => {
+function DashboardContent() {
     const router = useRouter();
     const searchParams = useSearchParams();
     const jobId = searchParams.get("job");
@@ -350,6 +350,18 @@ const Dashboard = () => {
             </div>
         </div>
     );
-};
+}
 
-export default Dashboard;
+export default function DashboardPage() {
+    return (
+        <Suspense
+            fallback={
+                <div className="container mx-auto flex min-h-[60vh] items-center justify-center">
+                    <Loader2 className="h-8 w-8 animate-spin text-primary" />
+                </div>
+            }
+        >
+            <DashboardContent />
+        </Suspense>
+    );
+}

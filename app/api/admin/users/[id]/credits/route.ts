@@ -17,15 +17,16 @@ const bodySchema = z.object({
 
 export async function PUT(
     request: Request,
-    { params }: { params: { id: string } },
+    { params }: { params: Promise<{ id: string }> },
 ) {
     try {
         await requireAdmin();
         const body = await request.json();
         const parsed = bodySchema.parse(body);
+        const { id } = await params;
 
         const updated = await updateUserCredits({
-            userId: params.id,
+            userId: id,
             credits: parsed.credits,
         });
 
@@ -51,4 +52,3 @@ export async function PUT(
         return NextResponse.json({ message }, { status });
     }
 }
-

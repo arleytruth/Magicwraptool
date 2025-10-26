@@ -37,7 +37,6 @@ export async function generateWrapImage(
             input: {
                 prompt: payload.prompt,
                 image_urls: [payload.objectImageUrl, payload.materialImageUrl],
-                num_images: 1,
                 output_format: "png",
             },
             logs: true,

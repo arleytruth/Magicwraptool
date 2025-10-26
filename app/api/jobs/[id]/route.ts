@@ -8,7 +8,7 @@ export const runtime = "nodejs";
 
 export async function GET(
     _request: Request,
-    { params }: { params: { id: string } },
+    { params }: { params: Promise<{ id: string }> },
 ) {
     try {
         const { userId } = auth();
@@ -35,7 +35,8 @@ export async function GET(
                 "verified",
         });
 
-        const job = await getJobById(params.id, supabaseUser.id);
+        const { id } = await params;
+        const job = await getJobById(id, supabaseUser.id);
         if (!job) {
             return NextResponse.json(
                 { message: "Job not found" },

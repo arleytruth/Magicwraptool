@@ -14,16 +14,24 @@ interface ClerkWebhookEvent {
     data: any;
 }
 
+type ClerkEmailAddress = {
+    id: string;
+    email_address?: string | null;
+    verification?: { status?: string | null } | null;
+};
+
 const allowedRoles = new Set(["user", "admin", "owner"]);
 
 function extractPrimaryEmail(user: any) {
-    const emailAddresses = Array.isArray(user?.email_addresses)
-        ? user.email_addresses
+    const emailAddresses: ClerkEmailAddress[] = Array.isArray(
+        user?.email_addresses,
+    )
+        ? (user.email_addresses as ClerkEmailAddress[])
         : [];
     const primaryId = user?.primary_email_address_id as string | null;
 
     const primaryEmail = primaryId
-        ? emailAddresses.find((item) => item.id === primaryId)
+        ? emailAddresses.find((item: ClerkEmailAddress) => item.id === primaryId)
         : emailAddresses[0];
 
     const email = primaryEmail?.email_address ?? null;
@@ -47,7 +55,7 @@ function normalizeRole(value: unknown) {
 
 export async function POST(request: Request) {
     const body = await request.text();
-    const headerList = headers();
+    const headerList = await headers();
 
     const svixId = headerList.get("svix-id");
     const svixTimestamp = headerList.get("svix-timestamp");

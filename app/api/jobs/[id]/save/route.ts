@@ -13,7 +13,7 @@ export const runtime = "nodejs";
 
 export async function POST(
     request: Request,
-    { params }: { params: { id: string } },
+    { params }: { params: Promise<{ id: string }> },
 ) {
     try {
         const { userId } = auth();
@@ -49,10 +49,11 @@ export async function POST(
             updated_at: new Date().toISOString(),
         };
 
+        const { id } = await params;
         const { data, error } = await supabase
             .from("jobs")
             .update(updates)
-            .eq("id", params.id)
+            .eq("id", id)
             .eq("user_id", supabaseUser.id)
             .select()
             .maybeSingle();

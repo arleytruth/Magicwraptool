@@ -66,8 +66,7 @@ export async function fetchStrapi<T>(
     }
 }
 
-export function getPreviewTokenFromHeaders() {
-    const hdrs = headers();
+export async function getPreviewTokenFromHeaders() {
+    const hdrs = await headers();
     return hdrs.get("x-strapi-preview-token");
 }
-

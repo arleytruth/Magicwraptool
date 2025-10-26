@@ -38,6 +38,7 @@
   "exclude": [
     "node_modules",
     "Magicwrap_old",
-    "supabase/migrations"
+    "supabase/migrations",
+    "magicwrap.disabled"
   ]
 }

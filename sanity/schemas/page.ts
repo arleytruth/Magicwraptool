@@ -1,29 +1,31 @@
 import { defineType, defineField, defineArrayMember } from 'sanity'
 
+const linkFieldFields = [
+  defineField({
+    name: 'label',
+    title: 'Etiket',
+    type: 'string',
+    validation: (Rule) => Rule.required(),
+  }),
+  defineField({
+    name: 'href',
+    title: 'URL',
+    type: 'string',
+    validation: (Rule) => Rule.required(),
+  }),
+  defineField({
+    name: 'openInNewTab',
+    title: 'Yeni sekmede aç',
+    type: 'boolean',
+    initialValue: false,
+  }),
+]
+
 const linkField = {
   name: 'link',
   title: 'Bağlantı',
   type: 'object',
-  fields: [
-    defineField({
-      name: 'label',
-      title: 'Etiket',
-      type: 'string',
-      validation: (Rule) => Rule.required(),
-    }),
-    defineField({
-      name: 'href',
-      title: 'URL',
-      type: 'string',
-      validation: (Rule) => Rule.required(),
-    }),
-    defineField({
-      name: 'openInNewTab',
-      title: 'Yeni sekmede aç',
-      type: 'boolean',
-      initialValue: false,
-    }),
-  ],
+  fields: linkFieldFields,
   preview: {
     select: {
       title: 'label',
@@ -395,9 +397,11 @@ export default defineType({
               type: 'array',
               of: [
                 defineArrayMember({
-                  ...linkField,
+                  name: 'linkItem',
+                  title: 'Bağlantı',
+                  type: 'object',
                   fields: [
-                    ...linkField.fields,
+                    ...linkFieldFields,
                     defineField({
                       name: 'description',
                       title: 'Açıklama',
@@ -597,7 +601,8 @@ export default defineType({
                   hidden: ({ parent }) => parent?.type !== 'select',
                   validation: (Rule) =>
                     Rule.custom((options, context) => {
-                      if (context.parent?.type === 'select' && (!options || options.length === 0)) {
+                      const parent = context?.parent as { type?: string } | undefined;
+                      if (parent?.type === 'select' && (!options || options.length === 0)) {
                         return 'Seçim alanı için en az bir seçenek ekleyin.'
                       }
                       return true

@@ -38,8 +38,39 @@ import type { Database } from "@/types/supabase";
 
 type SupabaseUser = Database["public"]["Tables"]["users"]["Row"];
 type JobRow = Database["public"]["Tables"]["jobs"]["Row"];
-type VideoRow = Database["public"]["Tables"]["video_generations"]["Row"];
-type CreditPackage = Database["public"]["Tables"]["credit_packages"]["Row"];
+type VideoRow = {
+    id: string;
+    user_id: string;
+    job_id: string | null;
+    source_image_url: string;
+    source_image_public_id: string | null;
+    prompt: string;
+    aspect_ratio: string | null;
+    resolution: string | null;
+    duration: string | null;
+    seed: number | null;
+    video_url: string | null;
+    video_public_id: string | null;
+    fal_request_id: string | null;
+    status: string;
+    credits_consumed: number;
+    error_message: string | null;
+    created_at: string;
+    started_at: string | null;
+    completed_at: string | null;
+    failed_at: string | null;
+    metadata: Record<string, unknown> | null;
+};
+
+type CreditPackage = {
+    id: number;
+    name: string;
+    slug: string;
+    description: string | null;
+    credits: number;
+    price_try: number;
+    currency: string;
+};
 
 type ProfileResponse = {
     success: boolean;
@@ -624,7 +655,11 @@ export default function ProfilePage() {
                                                                     variant="outline"
                                                                     onClick={async () => {
                                                                         try {
-                                                                            const response = await fetch(job.result_image_url);
+                                                                            const imageUrl = job.result_image_url;
+                                                                            if (!imageUrl) {
+                                                                                throw new Error("Görsel URL mevcut değil");
+                                                                            }
+                                                                            const response = await fetch(imageUrl);
                                                                             const blob = await response.blob();
                                                                             const url = window.URL.createObjectURL(blob);
                                                                             const a = document.createElement("a");
@@ -731,7 +766,11 @@ export default function ProfilePage() {
                                                                     variant="outline"
                                                                     onClick={async () => {
                                                                         try {
-                                                                            const response = await fetch(video.video_url);
+                                                                            const videoUrl = video.video_url;
+                                                                            if (!videoUrl) {
+                                                                                throw new Error("Video URL mevcut değil");
+                                                                            }
+                                                                            const response = await fetch(videoUrl);
                                                                             const blob = await response.blob();
                                                                             const url = window.URL.createObjectURL(blob);
                                                                             const a = document.createElement("a");
