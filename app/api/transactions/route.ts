@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { getAuth } from "@clerk/nextjs/server";
-import { createClient } from "@/lib/supabase/server";
+import { createSupabaseServiceRoleClient } from "@/lib/supabase/server";
 
 export async function GET(request: Request) {
   try {
@@ -13,7 +13,7 @@ export async function GET(request: Request) {
       );
     }
 
-    const supabase = await createClient();
+    const supabase = createSupabaseServiceRoleClient();
 
     // Get user's UUID from Clerk ID
     const { data: userData, error: userError } = await supabase

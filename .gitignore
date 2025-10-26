@@ -44,3 +44,6 @@ next-env.d.ts
 test-webhook.js
 stripe.tar.gz
 
+# React Bricks (disabled)
+magicwrap.disabled/
+
