@@ -8,9 +8,16 @@ import type { Database } from "@/types/supabase";
 export async function createSupabaseServerClient() {
     const cookieStore = await cookies();
 
+    const supabaseUrl = publicEnv.NEXT_PUBLIC_SUPABASE_URL;
+    const supabaseAnonKey = publicEnv.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+
+    if (!supabaseUrl || !supabaseAnonKey) {
+        throw new Error("Missing Supabase environment variables");
+    }
+
     return createServerClient<Database>(
-        publicEnv.NEXT_PUBLIC_SUPABASE_URL,
-        publicEnv.NEXT_PUBLIC_SUPABASE_ANON_KEY,
+        supabaseUrl,
+        supabaseAnonKey,
         {
             cookies: {
                 get(name: string) {
@@ -36,9 +43,16 @@ export async function createSupabaseServerClient() {
 }
 
 export function createSupabaseServiceRoleClient() {
+    const supabaseUrl = publicEnv.NEXT_PUBLIC_SUPABASE_URL;
+    const serviceRoleKey = serverEnv.SUPABASE_SERVICE_ROLE_KEY;
+
+    if (!supabaseUrl || !serviceRoleKey) {
+        throw new Error("Missing Supabase environment variables (URL or Service Role Key)");
+    }
+
     return createClient<Database>(
-        publicEnv.NEXT_PUBLIC_SUPABASE_URL,
-        serverEnv.SUPABASE_SERVICE_ROLE_KEY,
+        supabaseUrl,
+        serviceRoleKey,
         {
             auth: {
                 persistSession: false,

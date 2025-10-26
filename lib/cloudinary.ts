@@ -7,13 +7,28 @@ import {
     type UploadApiResponse,
 } from "cloudinary";
 
-import { serverEnv } from "@/lib/env";
+// Lazy-load Cloudinary config to avoid build-time errors
+let cloudinaryConfigured = false;
 
-cloudinary.config({
-    cloud_name: serverEnv.CLOUDINARY_CLOUD_NAME,
-    api_key: serverEnv.CLOUDINARY_API_KEY,
-    api_secret: serverEnv.CLOUDINARY_API_SECRET,
-});
+const ensureCloudinaryConfigured = () => {
+    if (cloudinaryConfigured) return;
+
+    const cloudName = process.env.CLOUDINARY_CLOUD_NAME;
+    const apiKey = process.env.CLOUDINARY_API_KEY;
+    const apiSecret = process.env.CLOUDINARY_API_SECRET;
+
+    if (!cloudName || !apiKey || !apiSecret) {
+        throw new Error("Missing Cloudinary environment variables");
+    }
+
+    cloudinary.config({
+        cloud_name: cloudName,
+        api_key: apiKey,
+        api_secret: apiSecret,
+    });
+
+    cloudinaryConfigured = true;
+};
 
 type UploadSource = Buffer | Readable;
 
@@ -27,6 +42,9 @@ export function uploadBuffer(
         transformation?: UploadApiOptions["transformation"];
     } = {},
 ) {
+    // Ensure Cloudinary is configured before using
+    ensureCloudinaryConfigured();
+
     const {
         folder = "magicwrap/generated",
         filename = `generated-${Date.now()}`,
@@ -64,6 +82,8 @@ export function uploadBuffer(
 }
 
 export async function deleteAsset(publicId: string) {
+    // Ensure Cloudinary is configured before using
+    ensureCloudinaryConfigured();
     await cloudinary.uploader.destroy(publicId, { invalidate: true });
 }
 

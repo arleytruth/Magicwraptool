@@ -68,6 +68,15 @@ export async function POST(request: Request) {
         );
     }
 
+    // Runtime check for webhook secret
+    if (!webhookSecret) {
+        console.error("[clerk webhook] CLERK_WEBHOOK_SECRET is missing");
+        return NextResponse.json(
+            { message: "Webhook configuration error" },
+            { status: 500 },
+        );
+    }
+
     let event: ClerkWebhookEvent;
     try {
         const webhook = new Webhook(webhookSecret);

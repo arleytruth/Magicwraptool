@@ -3,9 +3,6 @@ import { headers } from "next/headers";
 import { stripe } from "@/lib/stripe/server";
 import { createSupabaseServiceRoleClient } from "@/lib/supabase/server";
 
-// This is your Stripe CLI webhook secret for testing your endpoint locally.
-const webhookSecret = process.env.STRIPE_WEBHOOK_SECRET!;
-
 export async function POST(req: NextRequest) {
     const body = await req.text();
     const headersList = await headers();
@@ -15,6 +12,16 @@ export async function POST(req: NextRequest) {
         return NextResponse.json(
             { error: "No signature provided" },
             { status: 400 }
+        );
+    }
+
+    // Runtime check for webhook secret
+    const webhookSecret = process.env.STRIPE_WEBHOOK_SECRET;
+    if (!webhookSecret) {
+        console.error("⚠️ STRIPE_WEBHOOK_SECRET is missing");
+        return NextResponse.json(
+            { error: "Webhook configuration error" },
+            { status: 500 }
         );
     }
 
