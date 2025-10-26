@@ -20,7 +20,6 @@ const nextConfig = {
         position: 'bottom-right',
     },
     // Netlify için optimize edilmiş ayarlar
-    output: 'standalone',
     eslint: {
         ignoreDuringBuilds: true,
     },
