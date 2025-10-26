@@ -7,7 +7,8 @@ const publicSchema = z.object({
         .default("http://localhost:3000"),
     NEXT_PUBLIC_CONVEX_URL: z
         .string()
-        .url("NEXT_PUBLIC_CONVEX_URL must be a valid URL"),
+        .url("NEXT_PUBLIC_CONVEX_URL must be a valid URL")
+        .default("https://placeholder.convex.cloud"),
     NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY: z
         .string()
         .min(1, "NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY is required"),
