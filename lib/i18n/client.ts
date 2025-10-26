@@ -20,8 +20,8 @@ const resources = {
 if (!i18n.isInitialized) {
     i18n.use(initReactI18next).init({
         resources,
-        lng: "tr",
-        fallbackLng: "tr",
+        lng: "en", // Ana dil: İngilizce
+        fallbackLng: "en", // Yedek dil: İngilizce
         interpolation: {
             escapeValue: false,
         },
