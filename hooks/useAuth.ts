@@ -81,7 +81,7 @@ export function useAuth() {
         : null;
 
     const loadCredits = useMemo(() => {
-        return async () => {
+        return async (retryCount = 0) => {
             if (!user || !userLoaded || !authLoaded) {
                 return;
             }
@@ -92,11 +92,13 @@ export function useAuth() {
                     method: "GET",
                     headers: {
                         "Content-Type": "application/json",
+                        "Cache-Control": "no-cache",
                     },
+                    cache: "no-store",
                 });
 
                 if (!response.ok) {
-                    throw new Error("Failed to load user credits");
+                    throw new Error(`Failed to load user credits: ${response.status}`);
                 }
 
                 const data = (await response.json()) as {
@@ -104,14 +106,32 @@ export function useAuth() {
                     user?: { credits?: number | null; username?: string | null };
                 };
 
-                if (data?.success) {
-                    setSupabaseCredits(data.user?.credits ?? fallbackCredits);
+                if (data?.success && typeof data.user?.credits === "number") {
+                    console.log("[useAuth] ✅ Credits loaded:", data.user.credits);
+                    setSupabaseCredits(data.user.credits);
+                } else if (retryCount < 2) {
+                    // Retry up to 2 times
+                    console.warn("[useAuth] Invalid data, retrying...", retryCount + 1);
+                    setTimeout(() => loadCredits(retryCount + 1), 1000);
+                } else {
+                    console.warn("[useAuth] Using fallback credits after retries");
+                    setSupabaseCredits(fallbackCredits);
                 }
             } catch (error) {
-                console.warn("[useAuth] Failed to fetch Supabase credits", error);
-                setSupabaseCredits(fallbackCredits);
+                console.error("[useAuth] ❌ Failed to fetch Supabase credits", error);
+                
+                if (retryCount < 2) {
+                    // Retry up to 2 times
+                    console.warn("[useAuth] Error, retrying...", retryCount + 1);
+                    setTimeout(() => loadCredits(retryCount + 1), 1000);
+                } else {
+                    console.warn("[useAuth] Using fallback credits after errors");
+                    setSupabaseCredits(fallbackCredits);
+                }
             } finally {
-                setIsFetchingCredits(false);
+                if (retryCount === 0) {
+                    setIsFetchingCredits(false);
+                }
             }
         };
     }, [user, userLoaded, authLoaded, fallbackCredits]);
@@ -127,12 +147,12 @@ export function useAuth() {
 
         const init = async () => {
             if (isMounted) {
-                await loadCredits();
+                await loadCredits(0);
                 
                 // Kredileri her 30 saniyede bir otomatik güncelle
                 intervalId = setInterval(async () => {
                     if (isMounted) {
-                        await loadCredits();
+                        await loadCredits(0);
                     }
                 }, 30000); // 30 saniye
             }
@@ -160,7 +180,7 @@ export function useAuth() {
         token: null,
         async refreshUser() {
             await user?.reload?.();
-            await loadCredits();
+            await loadCredits(0);
         },
         async getAuthToken() {
             return await getToken();
