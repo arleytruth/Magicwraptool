@@ -236,7 +236,11 @@ export function Header({ navLinks = [] }: HeaderProps) {
                                 />
                             ) : (
                                 <div className="flex items-center gap-2">
-                                    <SignInButton mode="modal">
+                                    <SignInButton 
+                                        mode="modal"
+                                        forceRedirectUrl="/generate"
+                                        signUpForceRedirectUrl="/generate"
+                                    >
                                         <Button variant="ghost" type="button">
                                             Giriş Yap
                                         </Button>

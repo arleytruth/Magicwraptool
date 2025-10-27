@@ -369,23 +369,75 @@ body {
 .cl-footer,
 .cl-footerAction,
 .cl-footerActionLink,
+.cl-footerActionText,
 .cl-internal-badge,
 .__cl-badge {
   display: none !important;
 }
 
-/* Clerk Modal - Temaya uyumlu yap */
+/* Clerk Modal - Light mode (her zaman açık renk) */
 .cl-modalContent,
-.cl-card {
-  background: hsl(var(--card)) !important;
-  border: 1px solid hsl(var(--border)) !important;
+.cl-card,
+.cl-cardBox {
+  background: #ffffff !important;
+  border: 1px solid #e5e7eb !important;
 }
 
+/* Clerk Form Elements - Light mode */
+.cl-formFieldInput,
+.cl-formFieldInput__identifier,
+.cl-formFieldInput__password {
+  background: #ffffff !important;
+  border-color: #d1d5db !important;
+  color: #1a1a1a !important;
+}
+
+.cl-formFieldLabel {
+  color: #374151 !important;
+}
+
+.cl-headerTitle {
+  color: #111827 !important;
+}
+
+.cl-headerSubtitle,
+.cl-text,
+.cl-formFieldHintText {
+  color: #6b7280 !important;
+}
+
+/* Primary Button */
 .cl-formButtonPrimary {
-  background: hsl(var(--primary)) !important;
-  color: hsl(var(--primary-foreground)) !important;
+  background: hsl(250, 85%, 55%) !important;
+  color: #ffffff !important;
 }
 
 .cl-formButtonPrimary:hover {
-  background: hsl(var(--primary) / 0.9) !important;
+  background: hsl(250, 85%, 50%) !important;
+}
+
+/* Social Buttons */
+.cl-socialButtonsBlockButton {
+  background: #ffffff !important;
+  border-color: #d1d5db !important;
+  color: #374151 !important;
+}
+
+.cl-socialButtonsBlockButton:hover {
+  background: #f9fafb !important;
+}
+
+/* Links */
+.cl-formFieldAction,
+.cl-identityPreviewEditButton {
+  color: hsl(250, 85%, 55%) !important;
+}
+
+/* Divider */
+.cl-dividerLine {
+  background: #e5e7eb !important;
+}
+
+.cl-dividerText {
+  color: #6b7280 !important;
 }

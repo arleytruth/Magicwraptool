@@ -23,6 +23,17 @@ export function AppProviders({ children }: PropsWithChildren) {
         <ClerkProvider 
             publishableKey={browserEnv.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY}
             appearance={{
+                baseTheme: undefined, // System theme kullan ama light mode zorla
+                variables: {
+                    colorPrimary: "hsl(250, 85%, 55%)", // Primary color
+                    colorBackground: "#ffffff", // Light background
+                    colorInputBackground: "#ffffff",
+                    colorInputText: "#1a1a1a",
+                    colorText: "#1a1a1a",
+                    colorTextSecondary: "#666666",
+                    fontFamily: "Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
+                    borderRadius: "0.5rem",
+                },
                 elements: {
                     // Gizle: notification ve organization badges
                     organizationSwitcherTrigger: "hidden",
@@ -31,26 +42,46 @@ export function AppProviders({ children }: PropsWithChildren) {
                     
                     // Gizle: "Secured by Clerk" footer
                     footer: "hidden",
+                    footerAction: "hidden",
                     footerActionLink: "hidden",
+                    footerActionText: "hidden",
                     
                     // Gizle: Development mode badge
                     __experimental_badge: "hidden",
                     
-                    // Özelleştir: Modal ve card arka planları
-                    modalContent: "bg-background",
-                    cardBox: "bg-card",
-                    card: "bg-card shadow-xl border border-border",
+                    // Modal ve Card - Light mode
+                    modalContent: "bg-white dark:bg-white",
+                    modalBackdrop: "bg-black/50",
+                    card: "bg-white shadow-2xl border border-gray-200",
+                    cardBox: "bg-white",
                     
-                    // Özelleştir: Input ve button stilleri
+                    // Header
+                    headerTitle: "text-gray-900 font-bold text-xl",
+                    headerSubtitle: "text-gray-600",
+                    
+                    // Form elements - Light mode
                     formButtonPrimary: 
-                        "bg-primary text-primary-foreground hover:bg-primary/90",
+                        "bg-primary hover:bg-primary/90 text-white font-semibold",
                     formFieldInput: 
-                        "bg-background border-input focus:border-primary",
+                        "bg-white border-gray-300 text-gray-900 focus:border-primary",
+                    formFieldLabel: "text-gray-700 font-medium",
+                    
+                    // Links
                     identityPreviewEditButton: "text-primary hover:text-primary/80",
+                    formFieldAction: "text-primary hover:text-primary/80",
+                    
+                    // Social buttons
+                    socialButtonsBlockButton: 
+                        "bg-white border-gray-300 text-gray-700 hover:bg-gray-50",
+                    
+                    // Divider
+                    dividerLine: "bg-gray-200",
+                    dividerText: "text-gray-500",
                 },
                 layout: {
-                    // Footer'ı tamamen kaldır
                     showOptionalFields: false,
+                    socialButtonsPlacement: "bottom",
+                    socialButtonsVariant: "blockButton",
                 },
             }}
         >
