@@ -24,9 +24,33 @@ export function AppProviders({ children }: PropsWithChildren) {
             publishableKey={browserEnv.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY}
             appearance={{
                 elements: {
+                    // Gizle: notification ve organization badges
                     organizationSwitcherTrigger: "hidden",
                     notificationBadge: "hidden",
                     badge: "hidden",
+                    
+                    // Gizle: "Secured by Clerk" footer
+                    footer: "hidden",
+                    footerActionLink: "hidden",
+                    
+                    // Gizle: Development mode badge
+                    __experimental_badge: "hidden",
+                    
+                    // Özelleştir: Modal ve card arka planları
+                    modalContent: "bg-background",
+                    cardBox: "bg-card",
+                    card: "bg-card shadow-xl border border-border",
+                    
+                    // Özelleştir: Input ve button stilleri
+                    formButtonPrimary: 
+                        "bg-primary text-primary-foreground hover:bg-primary/90",
+                    formFieldInput: 
+                        "bg-background border-input focus:border-primary",
+                    identityPreviewEditButton: "text-primary hover:text-primary/80",
+                },
+                layout: {
+                    // Footer'ı tamamen kaldır
+                    showOptionalFields: false,
                 },
             }}
         >
