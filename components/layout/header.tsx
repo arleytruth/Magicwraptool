@@ -113,28 +113,28 @@ export function Header({ navLinks = [] }: HeaderProps) {
                         onClick={() => navigateToSection("features")}
                         className="text-sm font-medium text-foreground transition-transform duration-200 hover:scale-105 hover:text-primary"
                     >
-                        Özellikler
+                        Features
                     </button>
                     <button
                         type="button"
                         onClick={() => navigateToSection("how-it-works")}
                         className="text-sm font-medium text-foreground transition-transform duration-200 hover:scale-105 hover:text-primary"
                     >
-                        Nasıl Çalışır?
+                        How It Works
                     </button>
                     <button
                         type="button"
                         onClick={() => navigate("/ornekler")}
                         className="text-sm font-medium text-foreground transition-transform duration-200 hover:scale-105 hover:text-primary"
                     >
-                        Örnekleri Gör
+                        Examples
                     </button>
                     <button
                         type="button"
                         onClick={() => navigateToSection("pricing")}
                         className="text-sm font-medium text-foreground transition-transform duration-200 hover:scale-105 hover:text-primary"
                     >
-                        Fiyatlandırma
+                        Pricing
                     </button>
                     {navLinks.map((link) => (
                         <Link
@@ -158,7 +158,7 @@ export function Header({ navLinks = [] }: HeaderProps) {
                                 >
                                     <Coins className="h-4 w-4 text-primary" />
                                     <span>{user.credits || 0}</span>
-                                    <span className="text-xs text-muted-foreground">kredi</span>
+                                    <span className="text-xs text-muted-foreground">credits</span>
                                 </Badge>
                                 <Button
                                     size="sm"
@@ -167,7 +167,7 @@ export function Header({ navLinks = [] }: HeaderProps) {
                                     className="h-9 gap-1.5 font-semibold hover:bg-primary/10"
                                 >
                                     <Plus className="h-4 w-4" />
-                                    <span className="hidden md:inline">Kredi Al</span>
+                                    <span className="hidden md:inline">Get Credits</span>
                                 </Button>
                             </div>
 
@@ -179,8 +179,8 @@ export function Header({ navLinks = [] }: HeaderProps) {
                                 disabled={pendingAction === "/generate"}
                             >
                                 <Wand2 className="h-4 w-4" />
-                                <span className="hidden sm:inline">Görsel Oluştur</span>
-                                <span className="sm:hidden">Görsel</span>
+                                <span className="hidden sm:inline">Create Image</span>
+                                <span className="sm:hidden">Image</span>
                             </Button>
 
                             <Button
@@ -190,7 +190,7 @@ export function Header({ navLinks = [] }: HeaderProps) {
                                 disabled={pendingAction === "/generate"}
                             >
                                 <Video className="h-4 w-4" />
-                                <span className="hidden sm:inline">Video Oluştur</span>
+                                <span className="hidden sm:inline">Create Video</span>
                                 <span className="sm:hidden">Video</span>
                             </Button>
 
@@ -217,7 +217,7 @@ export function Header({ navLinks = [] }: HeaderProps) {
                                 disabled={pendingAction === "/generate"}
                             >
                                 <Wand2 className="mr-2 h-4 w-4" />
-                                {pendingAction === "/generate" ? "Yükleniyor..." : "Hemen Başla"}
+                                {pendingAction === "/generate" ? "Loading..." : "Start Now"}
                             </Button>
 
                             <LanguageSwitcher />
@@ -242,7 +242,7 @@ export function Header({ navLinks = [] }: HeaderProps) {
                                         signUpForceRedirectUrl="/generate"
                                     >
                                         <Button variant="ghost" type="button">
-                                            Giriş Yap
+                                            Sign In
                                         </Button>
                                     </SignInButton>
                                     <SignUpButton
@@ -251,7 +251,7 @@ export function Header({ navLinks = [] }: HeaderProps) {
                                         signInForceRedirectUrl="/generate"
                                     >
                                         <Button type="button" className="hidden sm:inline-flex">
-                                            Ücretsiz Başla
+                                            Start Free
                                         </Button>
                                     </SignUpButton>
                                 </div>

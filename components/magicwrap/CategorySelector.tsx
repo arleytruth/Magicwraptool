@@ -5,14 +5,14 @@ import { Car, Armchair, Home, Building, Smartphone, Package, Gauge, ShoppingBag,
 import type { WrapCategory } from "@/types/wrap";
 
 const categories = [
-  { id: 'vehicle' as WrapCategory, label: 'Araç Kaplama', icon: Car },
-  { id: 'furniture' as WrapCategory, label: 'Mobilya Kaplama', icon: Armchair },
-  { id: 'wall' as WrapCategory, label: 'Duvar Kaplama', icon: Home },
-  { id: 'building' as WrapCategory, label: 'Bina Kaplama', icon: Building },
-  { id: 'electronics' as WrapCategory, label: 'Elektronik Kaplama', icon: Smartphone },
-  { id: 'box' as WrapCategory, label: 'Kutu Kaplama', icon: Package },
+  { id: 'vehicle' as WrapCategory, label: 'Vehicle Wrapping', icon: Car },
+  { id: 'furniture' as WrapCategory, label: 'Furniture Wrapping', icon: Armchair },
+  { id: 'wall' as WrapCategory, label: 'Wall Wrapping', icon: Home },
+  { id: 'building' as WrapCategory, label: 'Building Wrapping', icon: Building },
+  { id: 'electronics' as WrapCategory, label: 'Electronics Wrapping', icon: Smartphone },
+  { id: 'box' as WrapCategory, label: 'Box Wrapping', icon: Package },
   { id: 'auto_tuning' as WrapCategory, label: 'Auto Tuning', icon: Gauge },
-  { id: 'general_item' as WrapCategory, label: 'Eşya Kaplama', icon: ShoppingBag }
+  { id: 'general_item' as WrapCategory, label: 'Item Wrapping', icon: ShoppingBag }
 ];
 
 interface CategorySelectorProps {
