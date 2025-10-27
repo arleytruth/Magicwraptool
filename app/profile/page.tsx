@@ -93,7 +93,7 @@ const formatDateTime = (value: string | null) => {
         return "-";
     }
     try {
-        return new Intl.DateTimeFormat("tr-TR", {
+        return new Intl.DateTimeFormat("en-US", {
             dateStyle: "medium",
             timeStyle: "short",
         }).format(new Date(value));
@@ -107,7 +107,7 @@ const formatDate = (value: string | null) => {
         return "-";
     }
     try {
-        return new Intl.DateTimeFormat("tr-TR", {
+        return new Intl.DateTimeFormat("en-US", {
             dateStyle: "long",
         }).format(new Date(value));
     } catch {
@@ -174,7 +174,7 @@ export default function ProfilePage() {
             }
 
             if (!response.ok) {
-                throw new Error("Kullanıcı bilgileri alınamadı");
+                throw new Error("Failed to load user information");
             }
 
             return response.json();
@@ -201,7 +201,7 @@ export default function ProfilePage() {
             }
 
             if (!response.ok) {
-                throw new Error("İşler alınamadı");
+                throw new Error("Failed to load jobs");
             }
 
             return response.json();
@@ -228,7 +228,7 @@ export default function ProfilePage() {
             }
 
             if (!response.ok) {
-                throw new Error("Videolar alınamadı");
+                throw new Error("Failed to load videos");
             }
 
             return response.json();
@@ -255,7 +255,7 @@ export default function ProfilePage() {
             }
 
             if (!response.ok) {
-                throw new Error("İşlemler alınamadı");
+                throw new Error("Failed to load transactions");
             }
 
             return response.json();
@@ -275,7 +275,7 @@ export default function ProfilePage() {
             });
 
             if (!response.ok) {
-                throw new Error("Kaydetme işlemi başarısız");
+                throw new Error("Save operation failed");
             }
 
             return response.json() as Promise<JobRow>;
@@ -285,19 +285,19 @@ export default function ProfilePage() {
         },
         onSuccess: (job, { saved }) => {
             toast({
-                title: saved ? "Galeriye kaydedildi" : "Galeri güncellendi",
+                title: saved ? "Saved to gallery" : "Gallery updated",
                 description: saved
-                    ? "Görsel kütüphanenize eklendi."
-                    : "Görsel kütüphaneden kaldırıldı.",
+                    ? "Added to your library."
+                    : "Removed from your library.",
             });
         },
         onError: (error) => {
             toast({
-                title: "İşlem başarısız",
+                title: "Operation failed",
                 description:
                     error instanceof Error
                         ? error.message
-                        : "Görsel güncellenemedi. Lütfen tekrar deneyin.",
+                        : "Image could not be updated. Please try again.",
                 variant: "destructive",
             });
         },
@@ -312,15 +312,15 @@ export default function ProfilePage() {
             <div className="container mx-auto flex min-h-[60vh] max-w-4xl flex-col items-center justify-center gap-6 px-4 py-12 text-center">
                 <Card className="max-w-lg">
                     <CardHeader>
-                        <CardTitle>Kullanıcı girişi gerekli</CardTitle>
+                        <CardTitle>Sign in required</CardTitle>
                         <CardDescription>
-                            Profil sayfasını görüntülemek için lütfen giriş yapın.
+                            Please sign in to view your profile page.
                         </CardDescription>
                     </CardHeader>
                     <CardContent>
                         <SignInButton mode="modal">
                             <Button size="lg" className="w-full">
-                                Giriş Yap
+                                Sign In
                             </Button>
                         </SignInButton>
                     </CardContent>
@@ -337,7 +337,7 @@ export default function ProfilePage() {
         user?.firstName ||
         user?.username ||
         supabaseUser?.email ||
-        "Magicwrap Üyesi";
+        "Magicwrap Member";
     const initials =
         ((supabaseUser?.first_name ?? user?.firstName ?? "").charAt(0) ||
             supabaseUser?.email?.charAt(0) ||
@@ -362,14 +362,16 @@ export default function ProfilePage() {
         return Object.entries(counts).sort((a, b) => b[1] - a[1])[0]?.[0] ?? null;
     })();
 
-    const isBusy = isLoading || profileLoading || jobsLoading || videosLoading || transactionsLoading;
+    const isProfileBusy = isLoading || profileLoading;
+    const isStatsBusy = jobsLoading || videosLoading;
+    const isGalleryBusy = jobsLoading || videosLoading;
 
     return (
         <div className="container mx-auto max-w-6xl px-4 py-12 space-y-12">
             <section className="grid gap-6 lg:grid-cols-[320px,1fr]">
                 <Card className="overflow-hidden">
                     <CardHeader className="items-center text-center pb-6">
-                        <Avatar className="h-24 w-24">
+                        <Avatar className="h-24 w-24 pointer-events-none">
                             <AvatarImage
                                 src={
                                     supabaseUser?.profile_image_url ??
@@ -385,41 +387,41 @@ export default function ProfilePage() {
                             {displayName}
                         </CardTitle>
                         <Badge variant="secondary" className="capitalize">
-                            {supabaseUser?.role ?? user?.role ?? "Üye"}
+                            {supabaseUser?.role ?? user?.role ?? "Member"}
                         </Badge>
                     </CardHeader>
                     <CardContent className="space-y-4 text-sm text-muted-foreground">
                         <div className="space-y-1">
-                            <p className="font-medium text-foreground">E-posta</p>
+                            <p className="font-medium text-foreground">Email</p>
                             <p>{supabaseUser?.email ?? user?.email ?? "-"}</p>
                         </div>
                         <div className="space-y-1">
-                            <p className="font-medium text-foreground">Kullanıcı adı</p>
+                            <p className="font-medium text-foreground">Username</p>
                             <p>{supabaseUser?.username ?? user?.username ?? "—"}</p>
                         </div>
                         <div className="space-y-1">
-                            <p className="font-medium text-foreground">Üyelik tarihi</p>
+                            <p className="font-medium text-foreground">Member since</p>
                             <p>{formatDate(supabaseUser?.created_at ?? null)}</p>
                         </div>
                         <div className="space-y-1">
-                            <p className="font-medium text-foreground">Son giriş</p>
+                            <p className="font-medium text-foreground">Last login</p>
                             <p>{formatDateTime(supabaseUser?.last_login_at ?? null)}</p>
                         </div>
                         <div className="space-y-1 rounded-lg border border-primary/20 bg-primary/5 p-4">
                             <p className="text-sm font-semibold text-primary">
-                                Güncel kredi bakiyesi
+                                Current credit balance
                             </p>
                             <p className="text-2xl font-bold text-foreground">
-                                {mergedCredits.toLocaleString("tr-TR")} kredi
+                                {mergedCredits.toLocaleString("en-US")} credits
                             </p>
                             <p className="text-xs">
-                                Daha fazla görsel üretmek için kredinizi artırabilirsiniz.
+                                You can increase your credits to create more images.
                             </p>
                         </div>
                         <Button asChild size="lg" className="w-full">
                             <Link href="/generate">
                                 <Sparkles className="mr-2 h-4 w-4" />
-                                Yeni kaplama oluştur
+                                Create new wrap
                             </Link>
                         </Button>
                     </CardContent>
@@ -427,48 +429,48 @@ export default function ProfilePage() {
 
                 <Card className="border-border/60">
                     <CardHeader>
-                        <CardTitle>Kullanım Özeti</CardTitle>
+                        <CardTitle>Usage Summary</CardTitle>
                         <CardDescription>
-                            Üretim performansınızı ve galeri durumunuzu takip edin.
+                            Track your production performance and gallery status.
                         </CardDescription>
                     </CardHeader>
                     <CardContent className="space-y-6">
-                        {isBusy ? (
+                        {isStatsBusy ? (
                             <div className="flex h-40 items-center justify-center text-muted-foreground">
                                 <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                                Bilgiler yükleniyor...
+                                Loading statistics...
                             </div>
                         ) : (
                             <>
                             <div className="grid gap-4 sm:grid-cols-2">
                                 <StatsCard
-                                    title="Toplam üretim"
+                                    title="Total generations"
                                     value={String(jobs?.length ?? 0)}
-                                    helperText="Tüm zamanlardaki iş sayısı"
+                                    helperText="All-time job count"
                                     icon={<Sparkles className="h-4 w-4 text-primary" />}
                                 />
                                 <StatsCard
-                                    title="Tamamlanan"
+                                    title="Completed"
                                     value={String(completedJobs.length)}
-                                    helperText="Başarıyla oluşturulan görseller"
+                                    helperText="Successfully created images"
                                     icon={<GalleryVertical className="h-4 w-4 text-chart-2" />}
                                 />
                                 <StatsCard
-                                    title="Galeride"
+                                    title="In Gallery"
                                     value={String(totalGalleryItems)}
-                                    helperText="Görsel ve videolar"
+                                    helperText="Images and videos"
                                     icon={<BookmarkCheck className="h-4 w-4 text-chart-3" />}
                                 />
                                 <StatsCard
-                                    title="Son üretim"
+                                    title="Last generation"
                                     value={
                                         lastJob?.created_at
                                             ? formatDateTime(lastJob.created_at)
-                                            : "Henüz üretim yok"
+                                            : "No generations yet"
                                     }
                                     helperText={
                                         mostUsedCategory
-                                            ? `En sık kullanılan kategori: ${mostUsedCategory}`
+                                            ? `Most used category: ${mostUsedCategory}`
                                             : undefined
                                     }
                                     icon={<CalendarClock className="h-4 w-4 text-chart-4" />}
@@ -480,24 +482,24 @@ export default function ProfilePage() {
                                 <div className="flex items-center justify-between">
                                     <h3 className="text-sm font-semibold flex items-center gap-2">
                                         <Receipt className="h-4 w-4 text-primary" />
-                                        Satın Alma Geçmişi
+                                        Purchase History
                                     </h3>
                                     {transactions && transactions.length > 3 && (
                                         <span className="text-xs text-muted-foreground">
-                                            Son 3 işlem
+                                            Last 3 transactions
                                         </span>
                                     )}
                                 </div>
                                 {transactionsLoading ? (
                                     <div className="flex h-20 items-center justify-center text-muted-foreground text-sm">
                                         <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                                        Yükleniyor...
+                                        Loading...
                                     </div>
                                 ) : !transactions || transactions.length === 0 ? (
                                     <div className="flex flex-col items-center justify-center gap-2 py-6 text-center bg-muted/30 rounded-lg border border-dashed">
                                         <Receipt className="h-6 w-6 text-muted-foreground" />
                                         <p className="text-sm text-muted-foreground">
-                                            Henüz satın alma işlemi yok
+                                            No purchases yet
                                         </p>
                                     </div>
                                 ) : (
@@ -513,7 +515,7 @@ export default function ProfilePage() {
                                                     </div>
                                                     <div>
                                                         <p className="text-sm font-medium">
-                                                            {transaction.credit_packages?.name || "Kredi Paketi"}
+                                                            {transaction.credit_packages?.name || "Credit Package"}
                                                         </p>
                                                         <p className="text-xs text-muted-foreground">
                                                             {formatDateTime(transaction.created_at)}
@@ -542,23 +544,23 @@ export default function ProfilePage() {
             <section className="space-y-6">
                 <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
                     <div>
-                        <h2 className="text-2xl font-semibold">Görsel Kütüphanem</h2>
+                        <h2 className="text-2xl font-semibold">My Image Library</h2>
                         <p className="text-sm text-muted-foreground">
-                            Oluşturduğunuz tüm kaplama sonuçları burada listelenir.
+                            All your wrap results are listed here.
                         </p>
                     </div>
                     <Button asChild variant="outline" size="sm">
                         <Link href="/generate">
                             <Sparkles className="mr-2 h-4 w-4" />
-                            Yeni görsel üret
+                            Create new image
                         </Link>
                     </Button>
                 </div>
 
-                {isBusy ? (
+                {isGalleryBusy ? (
                     <div className="flex h-48 items-center justify-center rounded-xl border border-dashed">
                         <Loader2 className="mr-2 h-5 w-5 animate-spin text-muted-foreground" />
-                        Görseller yükleniyor...
+                        Loading gallery...
                     </div>
                 ) : completedJobs.length === 0 && completedVideos.length === 0 ? (
                     <Card className="border-dashed bg-muted/30">
@@ -566,15 +568,15 @@ export default function ProfilePage() {
                             <Star className="h-10 w-10 text-primary" />
                             <div className="space-y-2">
                                 <p className="text-lg font-semibold">
-                                    Henüz görsel oluşturmadınız
+                                    No images created yet
                                 </p>
                                 <p className="text-sm text-muted-foreground max-w-md">
-                                    İlk kaplama görselinizi oluşturmak için Generate sayfasına gidin
-                                    ve nesne ile malzeme görsellerinizi yükleyin.
+                                    Go to the Generate page to create your first wrap image
+                                    by uploading your object and material images.
                                 </p>
                             </div>
                             <Button asChild size="lg">
-                                <Link href="/generate">Hemen Başla</Link>
+                                <Link href="/generate">Get Started</Link>
                             </Button>
                         </CardContent>
                     </Card>
@@ -615,19 +617,19 @@ export default function ProfilePage() {
                                                         <div className="absolute top-3 left-3 z-10">
                                                             <Badge className="bg-blue-500 hover:bg-blue-600 text-white font-semibold">
                                                                 <Sparkles className="w-3 h-3 mr-1" />
-                                                                Görsel
+                                                                Image
                                                             </Badge>
                                                         </div>
                                                         {job.result_image_url ? (
                                                             // eslint-disable-next-line @next/next/no-img-element
                                                             <img
                                                                 src={job.result_image_url}
-                                                                alt="Kaplama sonucu"
+                                                                alt="Wrap result"
                                                                 className="h-full w-full object-cover"
                                                             />
                                                         ) : (
                                                             <div className="flex h-full items-center justify-center text-sm text-muted-foreground">
-                                                                Sonuç görseli henüz hazır değil
+                                                                Result image not ready yet
                                                             </div>
                                                         )}
                                                     </div>
@@ -648,7 +650,7 @@ export default function ProfilePage() {
                                                                     onClick={() => setPreviewImage(job.result_image_url)}
                                                                 >
                                                                     <Eye className="mr-2 h-4 w-4" />
-                                                                    Görüntüle
+                                                                    View
                                                                 </Button>
                                                                 <Button
                                                                     size="sm"
@@ -657,7 +659,7 @@ export default function ProfilePage() {
                                                                         try {
                                                                             const imageUrl = job.result_image_url;
                                                                             if (!imageUrl) {
-                                                                                throw new Error("Görsel URL mevcut değil");
+                                                                                throw new Error("Image URL not available");
                                                                             }
                                                                             const response = await fetch(imageUrl);
                                                                             const blob = await response.blob();
@@ -670,14 +672,14 @@ export default function ProfilePage() {
                                                                             window.URL.revokeObjectURL(url);
                                                                             document.body.removeChild(a);
                                                                             toast({
-                                                                                title: "İndirildi",
-                                                                                description: "Görsel cihazınıza kaydedildi",
+                                                                                title: "Downloaded",
+                                                                                description: "Image saved to your device",
                                                                             });
                                                                         } catch (error) {
                                                                             console.error("Download error:", error);
                                                                             toast({
-                                                                                title: "İndirme başarısız",
-                                                                                description: "Lütfen tekrar deneyin",
+                                                                                title: "Download failed",
+                                                                                description: "Please try again",
                                                                                 variant: "destructive",
                                                                             });
                                                                         }
@@ -738,7 +740,7 @@ export default function ProfilePage() {
                                                             </div>
                                                         ) : (
                                                             <div className="flex h-full items-center justify-center text-sm text-muted-foreground">
-                                                                Video henüz hazır değil
+                                                                Video not ready yet
                                                             </div>
                                                         )}
                                                     </div>
@@ -759,7 +761,7 @@ export default function ProfilePage() {
                                                                     onClick={() => setPreviewVideo(video.video_url)}
                                                                 >
                                                                     <Eye className="mr-2 h-4 w-4" />
-                                                                    Görüntüle
+                                                                    View
                                                                 </Button>
                                                                 <Button
                                                                     size="sm"
@@ -768,7 +770,7 @@ export default function ProfilePage() {
                                                                         try {
                                                                             const videoUrl = video.video_url;
                                                                             if (!videoUrl) {
-                                                                                throw new Error("Video URL mevcut değil");
+                                                                                throw new Error("Video URL not available");
                                                                             }
                                                                             const response = await fetch(videoUrl);
                                                                             const blob = await response.blob();
@@ -781,14 +783,14 @@ export default function ProfilePage() {
                                                                             window.URL.revokeObjectURL(url);
                                                                             document.body.removeChild(a);
                                                                             toast({
-                                                                                title: "İndirildi",
-                                                                                description: "Video cihazınıza kaydedildi",
+                                                                                title: "Downloaded",
+                                                                                description: "Video saved to your device",
                                                                             });
                                                                         } catch (error) {
                                                                             console.error("Download error:", error);
                                                                             toast({
-                                                                                title: "İndirme başarısız",
-                                                                                description: "Lütfen tekrar deneyin",
+                                                                                title: "Download failed",
+                                                                                description: "Please try again",
                                                                                 variant: "destructive",
                                                                             });
                                                                         }
@@ -815,7 +817,7 @@ export default function ProfilePage() {
                                             className="gap-2 group"
                                         >
                                             <ChevronDown className="h-5 w-5 group-hover:translate-y-0.5 transition-transform" />
-                                            Daha Fazla Yükle ({allItems.length - visibleItems} kaldı)
+                                            Load More ({allItems.length - visibleItems} remaining)
                                         </Button>
                                     </div>
                                 )}
@@ -830,14 +832,14 @@ export default function ProfilePage() {
             <Dialog open={!!previewImage} onOpenChange={() => setPreviewImage(null)}>
                 <DialogContent className="max-w-4xl p-0">
                     <DialogHeader className="p-6 pb-0">
-                        <DialogTitle className="sr-only">Görsel Önizleme</DialogTitle>
+                        <DialogTitle className="sr-only">Image Preview</DialogTitle>
                     </DialogHeader>
                     <div className="relative w-full">
                         {previewImage && (
                             // eslint-disable-next-line @next/next/no-img-element
                             <img
                                 src={previewImage}
-                                alt="Görsel önizleme"
+                                alt="Image preview"
                                 className="w-full h-auto max-h-[80vh] object-contain"
                             />
                         )}
@@ -849,7 +851,7 @@ export default function ProfilePage() {
             <Dialog open={!!previewVideo} onOpenChange={() => setPreviewVideo(null)}>
                 <DialogContent className="max-w-4xl p-0">
                     <DialogHeader className="p-6 pb-0">
-                        <DialogTitle className="sr-only">Video Önizleme</DialogTitle>
+                        <DialogTitle className="sr-only">Video Preview</DialogTitle>
                     </DialogHeader>
                     <div className="relative w-full">
                         {previewVideo && (
@@ -867,9 +869,9 @@ export default function ProfilePage() {
 
             <section className="space-y-6">
                 <div className="text-center">
-                    <h2 className="text-2xl font-semibold">Kredi paketleri</h2>
+                    <h2 className="text-2xl font-semibold">Credit Packages</h2>
                     <p className="mt-2 text-sm text-muted-foreground">
-                        Sık kullanım için uygun fiyatlı kredi paketlerini inceleyin.
+                        Check out affordable credit packages for frequent use.
                     </p>
                 </div>
                 <PricingSection />
