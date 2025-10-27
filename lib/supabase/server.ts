@@ -46,8 +46,26 @@ export function createSupabaseServiceRoleClient() {
     const supabaseUrl = publicEnv.NEXT_PUBLIC_SUPABASE_URL;
     const serviceRoleKey = serverEnv.SUPABASE_SERVICE_ROLE_KEY;
 
+    console.log("[Supabase] Checking credentials...", {
+        hasUrl: !!supabaseUrl,
+        urlValue: supabaseUrl,
+        hasServiceKey: !!serviceRoleKey,
+        serviceKeyLength: serviceRoleKey?.length || 0,
+        serviceKeyPrefix: serviceRoleKey?.substring(0, 20) + "...",
+    });
+
     if (!supabaseUrl || !serviceRoleKey) {
-        throw new Error("Missing Supabase environment variables (URL or Service Role Key)");
+        const error = `Missing Supabase environment variables:
+        - URL: ${supabaseUrl ? '✅' : '❌ MISSING'}
+        - Service Role Key: ${serviceRoleKey ? '✅' : '❌ MISSING (length: ' + (serviceRoleKey?.length || 0) + ')'}`;
+        console.error("[Supabase] " + error);
+        throw new Error(error);
+    }
+
+    if (serviceRoleKey === "") {
+        const error = "SUPABASE_SERVICE_ROLE_KEY is empty string! Check Netlify environment variables.";
+        console.error("[Supabase] " + error);
+        throw new Error(error);
     }
 
     return createClient<Database>(
