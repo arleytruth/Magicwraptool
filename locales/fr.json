@@ -1,9 +1,10 @@
+
 {
   "common": {
     "loading": "Chargement...",
     "error": "Erreur",
     "success": "Succès",
-    "save": "Sauvegarder",
+    "save": "Enregistrer",
     "cancel": "Annuler",
     "download": "Télécharger",
     "delete": "Supprimer",
@@ -20,255 +21,281 @@
     "no": "Non",
     "ok": "OK",
     "retry": "Réessayer",
-    "tryAgain": "Réessayer",
+    "tryAgain": "Essayer à nouveau",
     "processing": "Traitement",
     "completed": "Terminé",
-    "failed": "Échoué",
+    "failed": "Échec",
     "pending": "En attente",
-    "waiting": "En attente",
-    "uploading": "Téléchargement",
+    "waiting": "En file d'attente",
+    "uploading": "Téléversement",
     "preparing": "Préparation"
   },
   "header": {
     "features": "Fonctionnalités",
-    "howItWorks": "Comment Ça Marche",
+    "howItWorks": "Comment ça marche",
     "pricing": "Tarifs",
-    "createWrappedImage": "Créer Mon Image Enveloppée",
+    "createWrappedImage": "Lancez votre covering maintenant",
     "create": "Créer",
     "profile": "Profil",
     "credits": "Crédits",
-    "gallery": "Ma Galerie",
-    "creditBalance": "Solde de Crédits",
-    "logout": "Se Déconnecter"
+    "gallery": "Ma galerie",
+    "creditBalance": "Solde de crédits",
+    "logout": "Se déconnecter"
   },
   "auth": {
-    "signInRequired": "Authentification Requise",
-    "pleaseSignIn": "Veuillez vous connecter pour voir votre profil.",
-    "signIn": "Se Connecter",
-    "signOut": "Se Déconnecter"
+    "signInRequired": "Connexion requise",
+    "pleaseSignIn": "Connecte-toi pour accéder à ton profil.",
+    "signIn": "Se connecter",
+    "signOut": "Se déconnecter"
   },
   "generate": {
-    "pageTitle": "Créez Votre Image Enveloppée",
-    "pageSubtitle": "Téléchargez deux images et laissez l'IA faire la magie",
-    "step1Title": "Étape 1: Télécharger l'Objet",
-    "step2Title": "Étape 2: Télécharger le Matériau",
-    "clickToUpload": "Cliquez pour télécharger",
+    "pageTitle": "Lance ton covering maintenant",
+    "pageSubtitle": "Importe deux visuels et laisse l'IA appliquer le covering",
+    "step1Title": "Étape 1 : Importe l'objet à couvrir",
+    "step2Title": "Étape 2 : Importe le matériau à appliquer",
+    "clickToUpload": "Cliquez pour importer",
     "object": "objet",
     "material": "matériau",
     "clear": "Effacer",
-    "wrapItNow": "Envelopper Maintenant",
+    "wrapItNow": "Lancer le covering",
     "processing": "Traitement...",
-    "yourWrappedImageReady": "Votre Image Enveloppée est Prête! 🎉",
-    "heresYourWrappedDesign": "Voici votre design enveloppé professionnellement",
-    "beforeAfter": "Avant & Après",
-    "originalObject": "Objet Original",
-    "materialApplied": "Matériau Appliqué",
-    "finalResult": "✨ Résultat Final",
-    "downloadImage": "Télécharger l'Image",
-    "saveToGallery": "Sauvegarder dans la Galerie",
-    "createAnother": "Créer un Autre",
+    "yourWrappedImageReady": "Votre covering est prêt ! 🎉",
+    "heresYourWrappedDesign": "Voici votre design couvert de manière professionnelle",
+    "beforeAfter": "Avant / Après",
+    "originalObject": "Objet d'origine",
+    "materialApplied": "Matériau appliqué",
+    "finalResult": "✨ Résultat final",
+    "downloadImage": "Télécharger l'image",
+    "saveToGallery": "Enregistrer dans la galerie",
+    "createAnother": "Créer un autre covering",
     "creditsRemaining": "crédits restants",
-    "finalizing": "Finalisation de votre image enveloppée…",
-    "jobId": "ID de Tâche",
-    "uploadingImages": "Téléchargement des Images...",
-    "imagesBeingPrepared": "Vos images sont préparées pour le traitement",
-    "processStarted": "Processus Démarré",
-    "imageBeingCreated": "Votre image est créée. Ce processus prendra environ 25-40 secondes...",
-    "failedToCreateJob": "Échec de la création de tâche",
-    "settingResultImage": "Configuration de l'image résultat:",
-    "objectDropHint": "Cliquez ici ou faites glisser votre photo d'objet",
-    "materialDropHint": "Cliquez ici ou faites glisser votre photo de matériau",
-    "wrappedImageReady": "Votre image enveloppée est prête!",
-    "processFailed": "Processus Échoué",
-    "imagesCouldNotBeProcessed": "Vos images n'ont pas pu être traitées. Veuillez utiliser des images JPG ou PNG de haute qualité et réessayer.",
-    "downloaded": "Téléchargé!",
-    "wrappedImageDownloaded": "Votre image enveloppée a été téléchargée avec succès",
-    "downloadFailed": "Téléchargement Échoué",
-    "imageCouldNotBeDownloaded": "L'image n'a pas pu être téléchargée. Veuillez réessayer.",
-    "savedToGallery": "Sauvegardé dans la Galerie!",
-    "imageSavedToGallery": "Votre image a été sauvegardée dans votre galerie. Vous pouvez y accéder depuis votre page de profil.",
-    "saveFailed": "Sauvegarde Échouée",
-    "imageCouldNotBeSaved": "L'image n'a pas pu être sauvegardée. Veuillez réessayer.",
-    "preparingImages": "Préparation des Images...",
-    "creatingWrappedImage": "Création de l'Image Enveloppée...",
-    "imagesBeingUploaded": "Vos images sont téléchargées et préparées pour le traitement...",
-    "aiAnalyzingImages": "L'IA analyse vos images et applique l'enveloppe de matériau. Ce processus prend généralement 25-40 secondes.",
-    "waitingInQueue": "En Attente dans la File",
-    "chooseCategory": "Choisissez Votre Catégorie",
-    "selectObjectToWrap": "Sélectionnez le type d'objet que vous souhaitez envelopper"
+    "finalizing": "Finalisation de votre visuel...",
+    "jobId": "ID de tâche",
+    "uploadingImages": "Importation des images...",
+    "imagesBeingPrepared": "Vos visuels sont préparés pour le traitement",
+    "processStarted": "Processus démarré",
+    "imageBeingCreated": "Votre covering est en cours de création. Cela prend généralement 25 à 40 secondes...",
+    "failedToCreateJob": "Impossible de créer la tâche",
+    "settingResultImage": "Configuration de l'image de résultat :",
+    "objectDropHint": "Cliquez ou glissez-déposez ici la photo de l'objet",
+    "materialDropHint": "Cliquez ou glissez-déposez ici la photo du matériau",
+    "wrappedImageReady": "Votre covering est prêt ! Vous pouvez le télécharger.",
+    "processFailed": "Processus échoué",
+    "imagesCouldNotBeProcessed": "Vos visuels n'ont pas pu être traités. Utilisez des fichiers JPG ou PNG de haute qualité puis réessayez.",
+    "downloaded": "Téléchargé !",
+    "wrappedImageDownloaded": "Votre covering a été téléchargé avec succès",
+    "downloadFailed": "Échec du téléchargement",
+    "imageCouldNotBeDownloaded": "Impossible de télécharger l'image. Veuillez réessayer.",
+    "savedToGallery": "Enregistré dans la galerie !",
+    "imageSavedToGallery": "Votre visuel a été ajouté à votre galerie. Vous pouvez y accéder depuis votre profil.",
+    "saveFailed": "Échec de l'enregistrement",
+    "imageCouldNotBeSaved": "Impossible d'enregistrer l'image. Veuillez réessayer.",
+    "preparingImages": "Préparation des images...",
+    "creatingWrappedImage": "Création de l'image couverte...",
+    "imagesBeingUploaded": "Vos visuels sont importés et préparés pour le traitement...",
+    "aiAnalyzingImages": "L'IA analyse vos visuels et applique le covering du matériau. Cela prend généralement 25 à 40 secondes.",
+    "waitingInQueue": "En file d'attente",
+    "chooseCategory": "Choisissez votre catégorie",
+    "selectObjectToWrap": "Sélectionnez le type d'objet à couvrir"
   },
   "profile": {
-    "myImageGallery": "Ma Galerie d'Images",
-    "allWrappedImagesCreated": "Toutes les images enveloppées que vous avez créées",
-    "noImagesYet": "Pas Encore d'Images",
-    "goToGeneratePage": "Allez à la page Générer pour créer votre première image enveloppée",
+    "memberSince": "Membre depuis",
+    "freeAccount": "Compte gratuit",
+    "usageStatistics": "Statistiques d'utilisation",
+    "usageDescription": "Suivez ici l'utilisation de vos crédits et de vos créations.",
+    "totalImagesGenerated": "Total d'images de covering",
+    "totalCreditsUsed": "Crédits utilisés au total",
+    "mostUsedCategory": "Catégorie la plus utilisée",
+    "lastGeneration": "Dernier covering",
+    "noGenerations": "Aucun covering pour le moment",
+    "noCategoryData": "Aucune donnée de catégorie",
+    "creditBalance": "Solde de crédits",
+    "currentBalance": "Crédits actuels",
+    "manageCredits": "Augmentez vos crédits pour continuer à générer des visuels.",
+    "addCredits": "Ajouter des crédits",
+    "creditTopUpOptions": "Packs de crédits",
+    "chooseCreditPackage": "Choisissez le pack de crédits qui vous convient",
+    "credits": "crédits",
+    "creditsLower": "crédits",
+    "imageGenerations": "générations d'images",
+    "buyNow": "Acheter maintenant",
+    "savePercentage": "Économisez {{percentage}}%",
+    "fastProcessing": "Traitement rapide en moins de 30 secondes",
+    "prioritySupport": "Support prioritaire inclus",
+    "recommendedPackage": "Pack recommandé pour un usage régulier",
+    "resultImageAlt": "Image de résultat du covering",
+    "objectImageAlt": "Image de l'objet d'origine",
+    "materialImageAlt": "Image du matériau",
+    "myImageGallery": "Ma bibliothèque d'images",
+    "allWrappedImagesCreated": "Toutes les images de covering que vous avez créées",
+    "noImagesYet": "Pas encore d'images",
+    "goToGeneratePage": "Rendez-vous sur la page Generate pour créer votre premier covering",
     "getStarted": "Commencer"
   },
   "footer": {
-    "poweredBy": "Propulsé par fal.ai SeeDream V4 Edit • Enveloppement de Véhicules IA Professionnel",
-    "ultraRealistic": "Ultra-réaliste • Qualité 8K • Photoréaliste"
+    "poweredBy": " • Covering professionnel IA pour véhicules",
+    "ultraRealistic": "Ultra réaliste • Qualité 8K • Photoréaliste"
   },
   "languageSwitcher": {
     "changeLanguage": "Changer de langue"
   },
   "howItWorks": {
-    "title": "C'est Vraiment Aussi Simple",
-    "subtitle": "Juste trois étapes simples—aucune connaissance technique requise",
-    "bottomText": "C'est tout! Pas de paramètres compliqués ou de choses techniques.",
-    "tryNowFree": "ESSAYEZ GRATUITEMENT MAINTENANT",
+    "title": "C'est vraiment aussi simple",
+    "subtitle": "Trois étapes simples, aucun savoir technique",
+    "bottomText": "Et voilà ! Aucun réglage compliqué ni jargon technique.",
+    "tryNowFree": "ESSAYER GRATUITEMENT",
     "steps": {
       "uploadObject": {
-        "title": "Téléchargez Votre Objet",
-        "description": "Prenez une photo de ce que vous voulez envelopper—une voiture, un mur, une table, ou autre chose. Téléchargez-la ici."
+        "title": "Importez votre objet",
+        "description": "Photographiez l'objet à couvrir — voiture, mur, table ou autre — puis importez-le ici."
       },
       "uploadDesign": {
-        "title": "Téléchargez Votre Design",
-        "description": "Téléchargez une photo du matériau ou du motif que vous voulez—bois, fibre de carbone, ou toute texture."
+        "title": "Importez votre design",
+        "description": "Importez la photo du matériau ou du motif souhaité — bois, carbone ou toute texture."
       },
       "getResult": {
-        "title": "Obtenez Votre Résultat",
-        "description": "Attendez 30 secondes et votre image enveloppée est prête! Téléchargez-la et utilisez-la immédiatement."
+        "title": "Obtenez votre résultat",
+        "description": "Patientez 30 secondes et votre image de covering est prête ! Téléchargez-la et utilisez-la immédiatement."
       }
     }
   },
   "pricing": {
-    "title": "Commencez Gratuitement, Grandissez Selon Vos Besoins",
-    "subtitle": "Tout le monde obtient 3 enveloppements gratuits pour essayer. Aucune carte de crédit requise pour commencer!",
-    "tryNowFree": "ESSAYEZ GRATUITEMENT MAINTENANT",
-    "bottomText": "Tous les plans fonctionnent de la même manière—choisissez simplement combien d'enveloppements vous avez besoin. Les crédits n'expirent jamais et vous pouvez toujours en acheter plus après.",
-    "mostPopular": "Le Plus Populaire",
+    "title": "Commencez gratuitement, évoluez à votre rythme",
+    "subtitle": "Tout le monde reçoit 3 coverings gratuits pour tester. Aucune carte bancaire requise !",
+    "tryNowFree": "ESSAYER GRATUITEMENT",
+    "bottomText": "Tous les forfaits fonctionnent de la même manière : choisissez simplement le nombre de coverings dont vous avez besoin. Les crédits n'expirent jamais et vous pouvez en acheter à tout moment.",
+    "mostPopular": "Le plus populaire",
     "getStarted": "Commencer",
     "plans": {
       "starter": {
-        "name": "Débutant",
+        "name": "Starter",
         "features": [
-          "10 enveloppements d'image",
-          "Téléchargements de haute qualité",
+          "10 coverings d'image",
+          "Téléchargements haute qualité",
           "Prêt en 30 secondes",
-          "Fonctionne sur n'importe quel objet"
+          "Compatible avec tout objet"
         ]
       },
       "professional": {
         "name": "Professionnel",
         "features": [
-          "25 enveloppements d'image",
-          "Téléchargements de haute qualité",
+          "25 coverings d'image",
+          "Téléchargements haute qualité",
           "Prêt en 30 secondes",
-          "Fonctionne sur n'importe quel objet",
-          "Support par email"
+          "Compatible avec tout objet",
+          "Support par e-mail"
         ]
       },
       "business": {
-        "name": "Entreprise",
+        "name": "Business",
         "features": [
-          "100 enveloppements d'image",
-          "Téléchargements de haute qualité",
+          "100 coverings d'image",
+          "Téléchargements haute qualité",
           "Prêt en 30 secondes",
-          "Fonctionne sur n'importe quel objet",
-          "Support prioritaire par email",
+          "Compatible avec tout objet",
+          "Support prioritaire par e-mail",
           "Parfait pour les équipes"
         ]
       }
     }
   },
   "features": {
-    "title": "Simple mais Puissant",
-    "subtitle": "Tout ce dont vous avez besoin, rien que vous n'avez pas",
-    "tryNowFree": "ESSAYEZ GRATUITEMENT MAINTENANT",
+    "title": "Créer des coverings réalistes avec l'IA devient un jeu d'enfant",
+    "subtitle": "Obtenez des résultats instantanés, professionnels et rapides",
+    "tryNowFree": "ESSAYER GRATUITEMENT",
     "items": {
       "worksOnAnything": {
-        "title": "Fonctionne sur Tout",
-        "description": "Voitures, murs, meubles, bâtiments—si vous pouvez le photographier, nous pouvons l'envelopper avec n'importe quel design"
+        "title": "Conçu par des experts du covering professionnel",
+        "description": "Voitures, murs, meubles, bâtiments : si vous pouvez le photographier, nous pouvons le couvrir avec le design de votre choix"
       },
       "anyPatternOrTexture": {
-        "title": "N'importe Quel Motif ou Texture",
-        "description": "Enveloppements vinyle, grain de bois, fibre de carbone, marbre, métal—utilisez n'importe quelle photo de matériau que vous voulez"
+        "title": "N'importe quel motif ou texture",
+        "description": "Coverings vinyle, veinures bois, carbone, marbre, métal : utilisez la photo de matériau que vous voulez"
       },
       "superFast": {
-        "title": "Super Rapide",
-        "description": "Vos résultats sont prêts en seulement 30 secondes. Pas d'attente—téléchargez et allez-y!"
+        "title": "Ultra rapide",
+        "description": "Vos résultats sont prêts en 30 secondes. Pas d'attente : importez et c'est parti !"
       },
       "looksCompletelyReal": {
-        "title": "Semble Complètement Réel",
-        "description": "La forme reste parfaite tandis que le matériau s'enroule naturellement avec un éclairage et des ombres réalistes"
+        "title": "Un rendu totalement réaliste",
+        "description": "La forme reste intacte tandis que le matériau s'adapte avec une lumière et des ombres naturelles"
       },
       "easyToSave": {
-        "title": "Facile à Sauvegarder",
-        "description": "Téléchargez des images de haute qualité immédiatement. Partagez avec les clients ou utilisez-les comme vous en avez besoin"
+        "title": "Facile à enregistrer",
+        "description": "Téléchargez instantanément des visuels haute définition. Partagez-les avec vos clients ou utilisez-les comme bon vous semble"
       },
       "yourLanguage": {
-        "title": "Votre Langue",
-        "description": "Disponible en anglais, turc, espagnol, français et allemand—utilisez ce qui vous convient"
+        "title": "Dans votre langue",
+        "description": "L'application a été créée en turc, mais elle est disponible dans d'autres langues"
       }
     }
   },
   "categorySelector": {
-    "vehicle": "Enveloppement de Véhicule",
-    "furniture": "Enveloppement de Meubles",
-    "wall": "Revêtement de Mur",
-    "building": "Enveloppement de Bâtiment",
-    "electronics": "Peau d'Appareil",
-    "device": "Peau d'Appareil",
-    "box": "Enveloppement de Boîte",
-    "autoTuning": "Auto Tuning",
-    "generalItem": "Enveloppement d'Article Général"
-  }
-  ,
+    "vehicle": "Covering véhicule",
+    "furniture": "Covering mobilier",
+    "wall": "Covering mur",
+    "building": "Covering bâtiment",
+    "electronics": "Covering électronique",
+    "device": "Covering appareil",
+    "box": "Covering boîte",
+    "autoTuning": "Auto tuning",
+    "generalItem": "Covering objets divers"
+  },
   "upload": {
-    "categoryTitle": "Choisissez Votre Catégorie",
-    "categoryDescription": "Sélectionnez le type d'objet que vous souhaitez envelopper",
+    "categoryTitle": "Choisissez votre catégorie",
+    "categoryDescription": "Sélectionnez le type d'objet à couvrir",
     "objectPhoto": {
-      "title": "Étape 1 : Photo de Votre Objet",
-      "description": "Téléchargez une photo de votre voiture, mur, meuble ou tout ce que vous souhaitez envelopper",
-      "helpText": "Toute photo convient—assurez-vous que l'objet soit clairement visible"
+      "title": "Étape 1 : Photo de votre objet",
+      "description": "Importez la photo de votre voiture, mur, meuble ou de tout objet que vous souhaitez couvrir",
+      "helpText": "Toute photo convient : assurez-vous simplement que l'objet soit bien visible"
     },
     "materialPhoto": {
-      "title": "Étape 2 : Photo de Votre Design",
-      "description": "Téléchargez une photo du matériau ou motif que vous souhaitez appliquer",
-      "helpText": "Bois, vinyle, fibre de carbone, marbre—toute texture que vous aimez"
+      "title": "Étape 2 : Photo de votre design",
+      "description": "Importez la photo du matériau ou du motif que vous souhaitez appliquer",
+      "helpText": "Bois, vinyle, fibre de carbone, marbre : choisissez la texture qui vous plaît"
     },
-    "startCreating": "Commencer Maintenant"
+    "startCreating": "Commencer à créer maintenant"
   },
   "furnitureMaterialAnalysis": {
-    "title": "Analyse du Matériau de Meubles",
-    "uploadDescription": "Glissez et déposez votre image de matériau ici, ou cliquez pour sélectionner",
-    "supportedFormats": "Supporte JPG, PNG, WEBP jusqu'à 10Mo",
-    "analyze": "Analyser le Matériau",
+    "title": "Analyse de matériau pour mobilier",
+    "uploadDescription": "Glissez-déposez ici votre visuel de matériau ou cliquez pour sélectionner",
+    "supportedFormats": "Compatible avec JPG, PNG, WEBP jusqu'à 10 Mo",
+    "analyze": "Analyser le matériau",
     "analyzing": "Analyse en cours...",
-    "edit": "Modifier les Résultats",
+    "edit": "Modifier les résultats",
     "reset": "Réinitialiser",
-    "results": "Résultats de l'Analyse",
-    "texture": "Analyse de la Texture",
-    "textureType": "Type de Texture",
-    "finish": "Finition de Surface",
-    "characteristics": "Caractéristiques du Matériau",
-    "color": "Analyse de la Couleur",
-    "primaryColor": "Couleur Primaire",
-    "secondaryColor": "Couleur Secondaire",
-    "colorPalette": "Palette de Couleurs",
-    "pattern": "Analyse du Motif",
-    "structure": "Structure du Motif",
-    "direction": "Direction du Motif",
-    "scale": "Échelle du Matériau",
-    "detail": "Niveau de Détail",
-    "confirm": "Confirmer l'Analyse",
-    "lighting": "Propriétés d'Éclairage",
+    "results": "Résultats de l'analyse",
+    "texture": "Analyse de texture",
+    "textureType": "Type de texture",
+    "finish": "Finition de surface",
+    "characteristics": "Caractéristiques du matériau",
+    "color": "Analyse des couleurs",
+    "primaryColor": "Couleur principale",
+    "secondaryColor": "Couleur secondaire",
+    "colorPalette": "Palette de couleurs",
+    "pattern": "Analyse du motif",
+    "structure": "Structure du motif",
+    "direction": "Orientation du motif",
+    "scale": "Échelle du matériau",
+    "detail": "Niveau de détail",
+    "confirm": "Confirmer l'analyse",
+    "lighting": "Propriétés lumineuses",
     "reflectivity": "Réflectivité",
-    "lightAbsorption": "Absorption de Lumière",
-    "shadowIntensity": "Intensité des Ombres",
-    "depthProperties": "Propriétés de Profondeur",
-    "woodGrainDepth": "Profondeur du Grain de Bois",
-    "fabricTextureDepth": "Profondeur de Texture du Tissu",
-    "leatherSheenLevel": "Niveau de Brillance du Cuir"
+    "lightAbsorption": "Absorption de la lumière",
+    "shadowIntensity": "Intensité des ombres",
+    "depthProperties": "Propriétés de profondeur",
+    "woodGrainDepth": "Profondeur du veinage bois",
+    "fabricTextureDepth": "Profondeur de la texture tissu",
+    "leatherSheenLevel": "Niveau de brillance du cuir"
   },
   "furnitureSurfaceApplication": {
-    "title": "Application de Surface de Meubles",
-    "objectPreview": "Aperçu de l'Objet",
-    "materialPreview": "Aperçu du Matériau",
+    "title": "Application sur surface de mobilier",
+    "objectPreview": "Aperçu de l'objet",
+    "materialPreview": "Aperçu du matériau",
     "applying": "Application...",
-    "applyMaterial": "Appliquer le Matériau",
+    "applyMaterial": "Appliquer le matériau",
     "reset": "Réinitialiser",
-    "appliedProperties": "Propriétés Appliquées",
-    "needAnalysis": "Veuillez compléter l'analyse du matériau et télécharger les deux images"
+    "appliedProperties": "Propriétés appliquées",
+    "needAnalysis": "Veuillez finaliser l'analyse du matériau et importer les deux visuels"
   }
 }
