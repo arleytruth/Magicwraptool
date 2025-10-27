@@ -62,10 +62,10 @@ export function HeroSection() {
               </div>
             </div>
 
-            <h1 className="mb-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+            <h1 className="mb-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.2]">
               <span className="block">Wrap anything with</span>
               <span className="block mt-2">any design in seconds</span>
-              <span className="block mt-2 bg-gradient-to-r from-primary to-purple-600 bg-clip-text text-transparent">
+              <span className="block mt-2 pb-2 bg-gradient-to-r from-primary to-purple-600 bg-clip-text text-transparent">
                 using AI
               </span>
             </h1>
