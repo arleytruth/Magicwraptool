@@ -123,10 +123,18 @@ export function useAuth() {
         }
 
         let isMounted = true;
+        let intervalId: NodeJS.Timeout;
 
         const init = async () => {
             if (isMounted) {
                 await loadCredits();
+                
+                // Kredileri her 30 saniyede bir otomatik güncelle
+                intervalId = setInterval(async () => {
+                    if (isMounted) {
+                        await loadCredits();
+                    }
+                }, 30000); // 30 saniye
             }
         };
 
@@ -134,6 +142,9 @@ export function useAuth() {
 
         return () => {
             isMounted = false;
+            if (intervalId) {
+                clearInterval(intervalId);
+            }
         };
     }, [user, userLoaded, authLoaded, loadCredits]);
 
