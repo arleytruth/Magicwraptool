@@ -2,6 +2,7 @@ import { clerkMiddleware, createRouteMatcher } from "@clerk/nextjs/server";
 
 const PublicRoute = createRouteMatcher([
     "/",
+    "/ornekler",          // Examples/showcase page
     "/api/credit-packages(.*)", // Pricing API public olmalı
     "/api/webhooks(.*)",        // Webhook endpoints (Stripe, vb.)
     "/support",            // Destek sayfası

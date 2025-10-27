@@ -9,8 +9,8 @@ import { useRouter } from "next/navigation";
 const categories = [
   {
     id: "vehicle",
-    title: "Araç Kaplama",
-    description: "Mockup kullanmak yerine aracın gerçek fotoğrafını kullan. Anında fotoğrafı çek, yükle ve istediğin malzeme ile kapla.",
+    title: "Vehicle Wrapping",
+    description: "Use real photos instead of mockups. Take a photo instantly, upload it and wrap it with any material you want.",
     examples: [
       {
         before: "/examples/vehicle-1-before.jpg",
@@ -32,8 +32,8 @@ const categories = [
   },
   {
     id: "furniture",
-    title: "Mobilya Kaplama",
-    description: "Mobilyalarını ahşap, mermer, metal ve daha fazlasıyla kapla. Tasarımını değiştir.",
+    title: "Furniture Wrapping",
+    description: "Wrap your furniture with wood, marble, metal and more. Change your design.",
     examples: [
       {
         before: "/examples/furniture-1-before.jpg",
@@ -55,8 +55,8 @@ const categories = [
   },
   {
     id: "wall",
-    title: "Duvar Kaplama",
-    description: "Duvarlarını taş, tuğla, ahşap ya da istediğin herhangi bir desenle kapla.",
+    title: "Wall Wrapping",
+    description: "Wrap your walls with stone, brick, wood or any pattern you want.",
     examples: [
       {
         before: "/examples/wall-1-before.jpg",
@@ -78,8 +78,8 @@ const categories = [
   },
   {
     id: "box",
-    title: "Kutu Kaplama",
-    description: "Tasarımlarını veya desenlerini gerçek kutu üzerinde kaplayarak gör.",
+    title: "Box Wrapping",
+    description: "See your designs or patterns wrapped on a real box.",
     examples: [
       {
         before: "/examples/box-1-before.jpg",
@@ -101,8 +101,8 @@ const categories = [
   },
   {
     id: "object",
-    title: "Genel Nesne Kaplama",
-    description: "Herhangi bir nesneyi istediğin materyal veya desenle kapla. Sınırsız yaratıcılık.",
+    title: "General Object Wrapping",
+    description: "Wrap any object with any material or pattern you want. Unlimited creativity.",
     examples: [
       {
         before: "/examples/object-1-before.jpg",
@@ -134,11 +134,11 @@ export default function ExamplesPage() {
         <div className="container max-w-7xl mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-primary via-purple-600 to-chart-2 bg-clip-text text-transparent">
-              İlham Alın
+              Get Inspired
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground">
-              Gerçek kullanıcılarımızın oluşturduğu etkileyici örnekleri keşfedin.
-              Sürükleyerek öncesi ve sonrasını karşılaştırın.
+              Discover impressive examples created by our real users.
+              Drag to compare before and after.
             </p>
           </div>
         </div>
@@ -169,8 +169,8 @@ export default function ExamplesPage() {
                   <BeforeAfterSlider
                     beforeImage={example.before}
                     afterImage={example.after}
-                    beforeAlt={`${category.title} Önce`}
-                    afterAlt={`${category.title} Sonra`}
+                    beforeAlt={`${category.title} Before`}
+                    afterAlt={`${category.title} After`}
                   />
                 </div>
               ))}
@@ -184,7 +184,7 @@ export default function ExamplesPage() {
                 className="px-8 h-14 text-lg font-semibold bg-gradient-to-r from-primary to-purple-600 hover:from-primary/90 hover:to-purple-600/90 shadow-xl hover:shadow-2xl transition-all"
               >
                 <Sparkles className="mr-2 h-5 w-5" />
-                {category.title} ile Hemen Başla
+                Start Now with {category.title}
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </div>
@@ -196,10 +196,10 @@ export default function ExamplesPage() {
       <section className="py-20 md:py-32 bg-gradient-to-b from-primary/10 via-purple-500/10 to-background">
         <div className="container max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-            Senin Sıran!
+            Your Turn!
           </h2>
           <p className="text-xl text-muted-foreground mb-8">
-            Ücretsiz krediyle kendi tasarımını oluşturmaya başla.
+            Start creating your own design with free credits.
           </p>
           <Button
             size="lg"
@@ -207,7 +207,7 @@ export default function ExamplesPage() {
             className="px-12 h-16 text-xl font-semibold bg-gradient-to-r from-primary to-purple-600 hover:from-primary/90 hover:to-purple-600/90 shadow-2xl hover:shadow-3xl transition-all"
           >
             <Sparkles className="mr-2 h-6 w-6" />
-            Hemen Oluşturmaya Başla
+            Start Creating Now
           </Button>
         </div>
       </section>
