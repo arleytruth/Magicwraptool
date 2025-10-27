@@ -14,8 +14,8 @@ interface BeforeAfterSliderProps {
 export function BeforeAfterSlider({
   beforeImage,
   afterImage,
-  beforeAlt = "Önce",
-  afterAlt = "Sonra",
+  beforeAlt = "Before",
+  afterAlt = "After",
   className = "",
 }: BeforeAfterSliderProps) {
   const [sliderPosition, setSliderPosition] = useState(50);
@@ -82,7 +82,7 @@ export function BeforeAfterSlider({
       {/* Loading Skeleton - positioned above images */}
       {!bothImagesLoaded && (
         <div className="absolute inset-0 bg-gradient-to-br from-muted to-card animate-pulse flex items-center justify-center z-10">
-          <div className="text-muted-foreground text-sm">Yükleniyor...</div>
+          <div className="text-muted-foreground text-sm">Loading...</div>
         </div>
       )}
 
@@ -148,16 +148,16 @@ export function BeforeAfterSlider({
 
           {/* Labels */}
           <div className="absolute top-4 left-4 bg-black/70 text-white px-3 py-1.5 rounded-lg text-sm font-medium backdrop-blur-sm pointer-events-none select-none">
-            Önce
+            Before
           </div>
           <div className="absolute top-4 right-4 bg-black/70 text-white px-3 py-1.5 rounded-lg text-sm font-medium backdrop-blur-sm pointer-events-none select-none">
-            Sonra
+            After
           </div>
 
           {/* Hint - only show when at 50% and not dragging */}
           {Math.abs(sliderPosition - 50) < 2 && !isDragging && (
             <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-primary/90 text-primary-foreground px-4 py-2 rounded-full text-sm font-medium backdrop-blur-sm animate-pulse pointer-events-none">
-              ← Sürükle →
+              ← Drag →
             </div>
           )}
         </>

@@ -51,7 +51,7 @@ export function EmailAuthForm({
                     title: "Google ile giriş yapılamadı",
                     description:
                         error.errors?.[0]?.message ??
-                        "Lütfen daha sonra tekrar dene.",
+                        "Please try again later.",
                     variant: "destructive",
                 });
                 return;

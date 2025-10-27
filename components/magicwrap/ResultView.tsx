@@ -49,14 +49,14 @@ export function ResultView({
       document.body.removeChild(a);
       
       toast({
-        title: "İndirildi! ✅",
-        description: "Görsel cihazınıza kaydedildi",
+        title: "Downloaded! ✅",
+        description: "Image saved to your device",
       });
     } catch (error) {
       console.error("Download error:", error);
       toast({
-        title: "İndirme başarısız",
-        description: "Lütfen tekrar deneyin",
+        title: "Download failed",
+        description: "Please try again",
         variant: "destructive",
       });
     }
@@ -67,15 +67,15 @@ export function ResultView({
     try {
       // Job is already saved in database, just redirect to profile
       toast({
-        title: "Galeriye kaydedildi! ✅",
-        description: "Görselinizi profil sayfanızdan görebilirsiniz",
+        title: "Saved to gallery! ✅",
+        description: "You can view your image from your profile page",
       });
       router.push("/profile");
     } catch (error) {
       console.error("Save to gallery error:", error);
       toast({
-        title: "Kaydetme başarısız",
-        description: "Lütfen tekrar deneyin",
+        title: "Save failed",
+        description: "Please try again",
         variant: "destructive",
       });
     } finally {
@@ -86,8 +86,8 @@ export function ResultView({
   const handleConvertToVideo = async () => {
     if (userCredits < 6) {
       toast({
-        title: "Yetersiz Kredi",
-        description: "Video oluşturmak için 6 kredi gerekli.",
+        title: "Insufficient Credits",
+        description: "6 credits required to create a video.",
         variant: "destructive",
       });
       return;
@@ -167,8 +167,8 @@ export function ResultView({
     } catch (error) {
       console.error("Download error:", error);
       toast({
-        title: "İndirme başarısız",
-        description: "Lütfen tekrar deneyin",
+        title: "Download failed",
+        description: "Please try again",
         variant: "destructive",
       });
     }
@@ -196,8 +196,8 @@ export function ResultView({
     } catch (error) {
       console.error("Save to gallery error:", error);
       toast({
-        title: "Kaydetme başarısız",
-        description: "Lütfen tekrar deneyin",
+        title: "Save failed",
+        description: "Please try again",
         variant: "destructive",
       });
     }
@@ -219,10 +219,10 @@ export function ResultView({
           <div>
             <h2 className="text-3xl font-bold flex items-center gap-2">
               <Sparkles className="h-8 w-8 text-primary" />
-              Kaplaman Hazır!
+              Your Wrap Is Ready!
             </h2>
             <p className="text-muted-foreground mt-1">
-              Kalan kredi: {userCredits}
+              Remaining credits: {userCredits}
             </p>
           </div>
           <Button
@@ -241,9 +241,9 @@ export function ResultView({
           <Card className="overflow-hidden border-2">
             <CardContent className="p-6">
               <div className="mb-4">
-                <h3 className="text-xl font-semibold mb-1">Önce</h3>
+                <h3 className="text-xl font-semibold mb-1">Before</h3>
                 <p className="text-sm text-muted-foreground">
-                  Orijinal nesne
+                  Original object
                 </p>
               </div>
               <div className="relative aspect-video rounded-lg overflow-hidden bg-muted">
@@ -263,13 +263,13 @@ export function ResultView({
             <CardContent className="p-6">
               <div className="mb-4">
                 <h3 className="text-xl font-semibold mb-1 flex items-center gap-2">
-                  Sonra
+                  After
                   <span className="text-sm font-normal text-primary bg-primary/10 px-2 py-0.5 rounded-full">
-                    YENİ
+                    NEW
                   </span>
                 </h3>
                 <p className="text-sm text-muted-foreground">
-                  Kaplama uygulandı
+                  Wrapping applied
                 </p>
               </div>
               <div className="relative aspect-video rounded-lg overflow-hidden bg-muted">
@@ -360,10 +360,10 @@ export function ResultView({
             className="w-full sm:w-auto gap-2 border-2 border-primary hover:bg-primary hover:text-primary-foreground relative"
           >
             <Video className="h-5 w-5" />
-            Videoya Dönüştür (6 Kredi)
+            Convert to Video (6 Credits)
             {!generatedVideoUrl && (
               <span className="absolute -top-1 -right-1 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs px-2 py-0.5 rounded-full font-semibold">
-                YENİ
+                NEW
               </span>
             )}
           </Button>
@@ -386,7 +386,7 @@ export function ResultView({
             className="w-full sm:w-auto gap-2"
           >
             <RotateCcw className="h-5 w-5" />
-            Yeni Kaplama Oluştur
+            Create New Wrap
           </Button>
         </div>
 

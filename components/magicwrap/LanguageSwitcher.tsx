@@ -11,11 +11,8 @@ import {
 import { Check, Globe } from "lucide-react";
 
 const languages = [
-  { code: "tr", label: "Türkçe", nativeName: "Türkçe" },
   { code: "en", label: "English", nativeName: "English" },
-  { code: "de", label: "Deutsch", nativeName: "Deutsch" },
-  { code: "es", label: "Español", nativeName: "Español" },
-  { code: "fr", label: "Français", nativeName: "Français" },
+  { code: "tr", label: "Türkçe", nativeName: "Türkçe" },
 ];
 
 export function LanguageSwitcher() {

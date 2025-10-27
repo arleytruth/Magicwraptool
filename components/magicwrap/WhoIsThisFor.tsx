@@ -8,32 +8,32 @@ import { useLegacyNavigation } from "@/hooks/use-legacy-navigation";
 const audiences = [
   {
     icon: Palette,
-    title: "Reklam Ajansları",
-    description: "Markanızın her yüzeyde nasıl duracağını baskıya geçmeden gösterin. Saatler değil saniyeler içinde şık mockuplar hazırlayın.",
+    title: "Advertising Agencies",
+    description: "Show your brand on any surface before printing. Create professional mockups in seconds, not hours.",
     benefits: [
-      "Hızlı müşteri sunumları",
-      "Birden fazla tasarımı anında dene",
-      "Gerçeğe en yakın sonuçları göster",
+      "Fast client presentations",
+      "Test multiple designs instantly",
+      "Show the most realistic results",
     ],
   },
   {
     icon: Building2,
-    title: "Mimarlık Ofisleri",
-    description: "Müşterilerinize farklı kaplama ve malzemeleri anında görselleştirin. Ahşap, taş, cam... hepsi için hazır örnekler sunun.",
+    title: "Architecture Firms",
+    description: "Instantly visualize different materials and wrappings for your clients. Wood, stone, glass... ready examples for everything.",
     benefits: [
-      "Malzeme seçeneklerini yan yana göster",
-      "Tasarım varyasyonlarını kolayca aktar",
-      "Projeleri daha hızlı kazan",
+      "Display material options side by side",
+      "Easily communicate design variations",
+      "Win projects faster",
     ],
   },
   {
     icon: Car,
-    title: "Kaplama Atölyeleri",
-    description: "Müşterilerinize kaplamanın araçlarında nasıl duracağını işe başlamadan gösterin. Güven ver, daha fazla satış kapat.",
+    title: "Wrapping Shops",
+    description: "Show your customers how wraps will look on their vehicles before you start work. Build trust, close more sales.",
     benefits: [
-      "Her wrap tasarımını önceden göster",
-      "Müşteri tereddütünü azalt",
-      "Dönüşüm oranlarını artır",
+      "Preview every wrap design",
+      "Reduce customer hesitation",
+      "Increase conversion rates",
     ],
   },
 ];
@@ -49,9 +49,9 @@ export function WhoIsThisFor() {
     <section className="py-24">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">İşiniz için biçilmiş kaftan</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">Perfect For Your Business</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            İster müşterileriniz için ister kendi projeleriniz için çalışın, Magic Wrapper size zaman ve maliyet kazandırır.
+            Whether you're working for clients or your own projects, Magic Wrapper saves you time and money.
           </p>
         </div>
 
@@ -86,7 +86,7 @@ export function WhoIsThisFor() {
             className="text-lg px-10 h-14 font-semibold"
             data-testid="button-try-now-who-is-this-for"
           >
-            Hemen ücretsiz dene
+            Try for free now
           </Button>
         </div>
       </div>

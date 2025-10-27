@@ -70,7 +70,7 @@ async function compressImageIfNeeded(file: File): Promise<File> {
     return compressedFile;
   } catch (error) {
     console.error("❌ Image compression failed:", error);
-    throw new Error("Görsel sıkıştırılamadı. Lütfen daha küçük bir görsel deneyin.");
+    throw new Error("Image compression failed. Please try a smaller image.");
   }
 }
 
@@ -98,10 +98,10 @@ export function UploadSection({ variant = "marketing", onJobCreated }: UploadSec
   const remainingCredits = user?.credits ?? 0;
   const isVerifiedUser = isAuthenticated && isEmailVerified;
   const creditHeadline = isVerifiedUser
-    ? `Elinde ${remainingCredits} kredi var`
+    ? `You have ${remainingCredits} credits`
     : needsVerification
-      ? "E-postanı doğruladığında 3 ücretsiz kredi seni bekliyor"
-      : "Kayıt olunca 3 ücretsiz kredi kazan";
+      ? "3 free credits waiting for you after email verification"
+      : "Get 3 free credits when you sign up";
   const authRedirectPath = "/generate";
 
   useEffect(() => {
@@ -119,10 +119,10 @@ export function UploadSection({ variant = "marketing", onJobCreated }: UploadSec
     openAuthModal({
       redirectTo: authRedirectPath,
       initialMode: isAuthenticated ? "login" : "signup",
-      title: needsVerification ? "E-postanı doğrula" : "Ücretsiz hesabını oluştur",
+      title: needsVerification ? "Verify your email" : "Create your free account",
       description: needsVerification
-        ? "Hesabını aktifleştirmek için doğrulama e-postanı kontrol et. 3 ücretsiz kredin seni bekliyor."
-        : "3 ücretsiz kredi ile hemen Magic Wrapper’ı dene. Sadece e-posta ile dakikalar içinde kayıt ol.",
+        ? "Check your verification email to activate your account. 3 free credits are waiting for you."
+        : "Try Magic Wrapper with 3 free credits. Sign up in minutes with just your email.",
     });
   }, [openAuthModal, authRedirectPath, isAuthenticated, needsVerification]);
 
@@ -185,8 +185,8 @@ export function UploadSection({ variant = "marketing", onJobCreated }: UploadSec
         console.log(`${type} image selected:`, processedFile.name);
       } catch (error) {
         toast({
-          title: "Hata",
-          description: error instanceof Error ? error.message : "Görsel yüklenemedi",
+          title: "Error",
+          description: error instanceof Error ? error.message : "Image could not be uploaded",
           variant: "destructive",
         });
         // Reset file input
@@ -214,7 +214,7 @@ export function UploadSection({ variant = "marketing", onJobCreated }: UploadSec
         throw new Error(
           t(
             "upload.errors.uploadFailed",
-            "Görsel yüklenemedi. Lütfen tekrar dene.",
+            "Image upload failed. Please try again.",
           ),
         );
       }
@@ -242,15 +242,15 @@ export function UploadSection({ variant = "marketing", onJobCreated }: UploadSec
           setShowResult(true);
           await refreshUser();
           toast({
-            title: "Başarılı! ✨",
-            description: "Kaplamanız hazır",
+            title: "Success! ✨",
+            description: "Your wrap is ready",
           });
         } else if (data.status === "failed") {
           setIsPolling(false);
           setIsSubmitting(false);
           toast({
-            title: "İşlem başarısız",
-            description: data.error_message || "Bir hata oluştu",
+            title: "Process failed",
+            description: data.error_message || "An error occurred",
             variant: "destructive",
           });
         }
@@ -322,7 +322,7 @@ export function UploadSection({ variant = "marketing", onJobCreated }: UploadSec
       if (!response.ok) {
         let message = t(
           "upload.errors.jobFailed",
-          "Kaplama işlemi başlatılamadı.",
+          "Wrapping process could not be started.",
         );
         try {
           const data = await response.json();
@@ -341,10 +341,10 @@ export function UploadSection({ variant = "marketing", onJobCreated }: UploadSec
       onJobCreated?.(job.id);
 
       toast({
-        title: t("upload.jobStartedTitle", "Kaplama oluşturuluyor"),
+        title: t("upload.jobStartedTitle", "Creating wrap"),
         description: t(
           "upload.jobStartedDescription",
-          "Görseliniz hazırlanıyor, lütfen bekleyin...",
+          "Your image is being prepared, please wait...",
         ),
       });
 
@@ -354,13 +354,13 @@ export function UploadSection({ variant = "marketing", onJobCreated }: UploadSec
       console.error(error);
       setIsSubmitting(false);
       toast({
-        title: t("upload.errors.genericTitle", "İşlem başarısız"),
+        title: t("upload.errors.genericTitle", "Process failed"),
         description:
           error instanceof Error
             ? error.message
             : t(
                 "upload.errors.genericDescription",
-                "Lütfen biraz sonra tekrar dene.",
+                "Please try again later.",
               ),
         variant: "destructive",
       });
@@ -425,9 +425,9 @@ export function UploadSection({ variant = "marketing", onJobCreated }: UploadSec
               <span className="text-primary">★★★★★</span>
               <span>{creditHeadline}</span>
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Hazırsan hemen başlayalım</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Ready? Let's start now</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              İki fotoğrafını yükle, 30 saniye içinde sonucu ekranda gör.
+              Upload two photos and see the result on your screen in 30 seconds.
             </p>
           </div>
         )}
@@ -510,17 +510,17 @@ export function UploadSection({ variant = "marketing", onJobCreated }: UploadSec
               <p className="text-xs text-muted-foreground flex items-center justify-center gap-2" suppressHydrationWarning>
                 {isVerifiedUser ? (
                   <>
-                    Görsel başına 1 kredi • Elinde {remainingCredits} kredi var
+                    1 credit per image • You have {remainingCredits} credits
                   </>
                 ) : needsVerification ? (
                   <>
                     <Lock className="h-4 w-4" />
-                    E-postanı doğruladığında 3 ücretsiz krediyle devam edebilirsin.
+                    After verifying your email, you can continue with 3 free credits.
                   </>
                 ) : (
                   <>
                     <Lock className="h-4 w-4" />
-                    Üç ücretsiz krediyle başlamak için ücretsiz hesabını oluştur.
+                    Create your free account to start with 3 free credits.
                   </>
                 )}
               </p>
@@ -606,7 +606,7 @@ function DropZone({
         {isOptimizing ? (
           <div className="aspect-video rounded-lg bg-muted/50 flex flex-col items-center justify-center gap-3 border-2 border-dashed">
             <Loader2 className="h-12 w-12 text-primary animate-spin" />
-            <p className="text-sm font-medium text-muted-foreground">Görsel optimize ediliyor...</p>
+            <p className="text-sm font-medium text-muted-foreground">Optimizing image...</p>
           </div>
         ) : file && previewUrl ? (
           <div className="relative aspect-video rounded-lg overflow-hidden bg-muted flex items-center justify-center">
@@ -642,7 +642,7 @@ function DropZone({
             <div className="aspect-video border-2 border-dashed rounded-lg flex flex-col items-center justify-center gap-3 hover-elevate transition-all p-6">
               <Upload className="h-14 w-14 text-muted-foreground" />
               <p className="text-base font-medium text-center">{helpText}</p>
-              <p className="text-sm text-muted-foreground">Buraya tıkla veya fotoğrafını sürükleyip bırak</p>
+              <p className="text-sm text-muted-foreground">Click here or drag and drop your photo</p>
             </div>
             <input
               type="file"
@@ -658,7 +658,7 @@ function DropZone({
       {disabled && (
         <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 bg-background/80 text-center rounded-lg">
           <Lock className="h-6 w-6 text-primary" />
-          <p className="text-sm font-medium">Giriş yapıp e-postanı doğruladıktan sonra kullanılabilir</p>
+          <p className="text-sm font-medium">Available after signing in and verifying your email</p>
           <Button
             variant="outline"
             size="sm"
@@ -667,7 +667,7 @@ function DropZone({
               onRequireAuth?.();
             }}
           >
-            Giriş Yap
+            Sign In
           </Button>
         </div>
       )}

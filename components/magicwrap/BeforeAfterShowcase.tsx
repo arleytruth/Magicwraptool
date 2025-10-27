@@ -12,29 +12,29 @@ const examples = [
   {
     id: 1,
     category: 'vehicle' as WrapCategory,
-    label: "Araç Kaplama",
-    description: "Araçlarını farklı renkler ve desenlerle kapla",
+    label: "Vehicle Wrapping",
+    description: "Wrap your vehicles with different colors and patterns",
     bgColor: "from-blue-500/20 to-purple-500/20",
   },
   {
     id: 2,
     category: 'furniture' as WrapCategory,
-    label: "Mobilya Kaplama",
-    description: "Mobilyalarına yeni bir görünüm kazandır",
+    label: "Furniture Wrapping",
+    description: "Give your furniture a brand new look",
     bgColor: "from-amber-500/20 to-orange-500/20",
   },
   {
     id: 3,
     category: 'wall' as WrapCategory,
-    label: "Duvar Kaplama",
-    description: "Duvarlarını istediğin desenle yenile",
+    label: "Wall Wrapping",
+    description: "Transform your walls with any design you want",
     bgColor: "from-emerald-500/20 to-teal-500/20",
   },
   {
     id: 4,
     category: 'object' as WrapCategory,
-    label: "Genel Nesne Kaplama",
-    description: "Her türlü nesneye istediğin tasarımı uygula",
+    label: "General Object Wrapping",
+    description: "Apply any design to any type of object",
     bgColor: "from-violet-500/20 to-purple-500/20",
   },
 ];
@@ -54,9 +54,9 @@ export function BeforeAfterShowcase() {
     <section id="examples" className="py-24 bg-muted/30">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">Neler Yapabilirsiniz?</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">What Can You Do?</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Her şeyi istediğin tasarımla kapla—arabalar, duvarlar, mobilyalar ve daha fazlası
+            Wrap anything with any design—cars, walls, furniture and so much more
           </p>
         </div>
 
@@ -72,13 +72,13 @@ export function BeforeAfterShowcase() {
                 <div className="grid grid-cols-2 gap-0">
                   <div className="relative aspect-square bg-gradient-to-br from-muted to-muted-foreground/10 flex items-center justify-center border-r">
                     <span className="absolute top-2 left-2 bg-background/80 backdrop-blur-sm px-2 py-1 rounded text-xs font-medium">
-                      Önce
+                      Before
                     </span>
                     <div className="text-5xl opacity-20">📷</div>
                   </div>
                   <div className={`relative aspect-square bg-gradient-to-br ${example.bgColor} flex items-center justify-center`}>
                     <span className="absolute top-2 left-2 bg-background/80 backdrop-blur-sm px-2 py-1 rounded text-xs font-medium">
-                      Sonra
+                      After
                     </span>
                     <div className="text-5xl opacity-40">✨</div>
                   </div>
@@ -105,11 +105,11 @@ export function BeforeAfterShowcase() {
             className="text-lg px-10 h-12 font-semibold border-2 hover:bg-primary hover:text-primary-foreground"
             data-testid="button-view-all-examples"
           >
-            Tüm Örnekleri Gör
+            View All Examples
             <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
           <p className="text-sm text-muted-foreground">
-            100+ gerçek örnek ve interaktif karşılaştırma
+            100+ real examples and interactive comparisons
           </p>
         </div>
       </div>

@@ -58,20 +58,20 @@ export function HeroSection() {
             <div className="mb-6 flex justify-center lg:justify-start">
               <div className="inline-flex items-center gap-2 rounded-full border bg-muted/50 backdrop-blur-sm px-4 py-1.5 text-sm shadow-sm">
                 <Sparkles className="h-4 w-4 text-primary" />
-                <span className="font-medium">3 ücretsiz kredi ile başla</span>
+                <span className="font-medium">Start with 3 free credits</span>
               </div>
             </div>
 
             <h1 className="mb-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-              <span className="block">İstediğin tasarımla</span>
-              <span className="block mt-2">her şeyi saniyeler içinde</span>
+              <span className="block">Wrap anything with</span>
+              <span className="block mt-2">any design in seconds</span>
               <span className="block mt-2 bg-gradient-to-r from-primary to-purple-600 bg-clip-text text-transparent">
-                kapla
+                using AI
               </span>
             </h1>
 
             <p className="mb-8 text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed max-w-xl mx-auto lg:mx-0">
-              Sadece iki fotoğraf yükle, gerisini yapay zekamız halletsin. Karmaşık ayarlar yok!
+              Just upload two photos and let our AI handle the rest. No complicated settings!
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -81,7 +81,7 @@ export function HeroSection() {
                 className="h-12 sm:h-14 px-6 sm:px-10 text-base sm:text-lg font-semibold bg-gradient-to-r from-primary to-purple-600 hover:from-primary/90 hover:to-purple-600/90 shadow-xl hover:shadow-2xl transition-all"
                 data-testid="button-start-wrapping"
               >
-                Hemen ücretsiz dene
+                Try for free now
                 <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
               </Button>
               <Button
@@ -91,22 +91,22 @@ export function HeroSection() {
                 className="h-12 sm:h-14 px-6 sm:px-10 text-base sm:text-lg backdrop-blur-sm"
                 data-testid="button-see-examples"
               >
-                Örnekleri gör
+                See Examples
               </Button>
             </div>
 
             <div className="mt-8 flex flex-wrap items-center justify-center lg:justify-start gap-4 sm:gap-6 text-xs sm:text-sm text-muted-foreground">
               <div className="flex items-center gap-2">
                 <div className="h-2 w-2 rounded-full bg-chart-2" />
-                <span>Kurulum yok</span>
+                <span>No installation</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="h-2 w-2 rounded-full bg-chart-2" />
-                <span>30 saniyede sonuç</span>
+                <span>Results in 30 seconds</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="h-2 w-2 rounded-full bg-chart-2" />
-                <span>Gerçekçi görünüm</span>
+                <span>Realistic look</span>
               </div>
             </div>
           </div>
@@ -127,7 +127,7 @@ export function HeroSection() {
               <div className="absolute inset-0" style={{ willChange: 'auto' }}>
                 <img
                   src="/hero-after.png"
-                  alt="Önce - Orijinal Görsel"
+                  alt="Before - Original Image"
                   className="w-full h-full object-cover pointer-events-none"
                   draggable="false"
                   loading="eager"
@@ -150,7 +150,7 @@ export function HeroSection() {
               >
                 <img
                   src="/hero-before.jpg"
-                  alt="Sonra - Kaplı Görsel"
+                  alt="After - Wrapped Image"
                   className="w-full h-full object-cover pointer-events-none"
                   draggable="false"
                   loading="eager"
@@ -178,16 +178,16 @@ export function HeroSection() {
 
               {/* Labels */}
               <div className="absolute top-4 left-4 bg-black/50 backdrop-blur-sm text-white px-3 py-1.5 rounded-full text-xs sm:text-sm font-semibold pointer-events-none select-none">
-                Önce
+                Before
               </div>
               <div className="absolute top-4 right-4 bg-black/50 backdrop-blur-sm text-white px-3 py-1.5 rounded-full text-xs sm:text-sm font-semibold pointer-events-none select-none">
-                Sonra
+                After
               </div>
 
               {/* Drag Hint */}
               {sliderPosition === 50 && !isDragging && (
                 <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-primary/90 backdrop-blur-sm text-primary-foreground px-4 py-2 rounded-full text-xs sm:text-sm font-medium shadow-lg animate-pulse pointer-events-none">
-                  ← Sürükle →
+                  ← Drag →
                 </div>
               )}
             </div>
