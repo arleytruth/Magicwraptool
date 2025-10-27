@@ -39,8 +39,8 @@ export function Footer({ navLinks = [] }: FooterProps) {
                             <span className="text-xl font-bold text-foreground">Magic Wrapper</span>
                         </div>
                         <p className="max-w-md text-sm text-muted-foreground">
-                            Yapay zeka ile iki görseli saniyeler içinde birleştirin. Prompt
-                            gerekmeden, dilediğiniz yüzeye istediğiniz kaplamayı uygulayın.
+                            Combine two images in seconds with AI. Apply any wrap to any surface
+                            without prompts or complicated settings.
                         </p>
                     </div>
 
@@ -52,7 +52,7 @@ export function Footer({ navLinks = [] }: FooterProps) {
                                     onClick={() => navigateToSection("features")}
                                     className="transition-transform duration-200 text-left hover:scale-105 hover:text-foreground"
                                 >
-                                    Özellikler
+                                    Features
                                 </button>
                             </li>
                             <li>
@@ -61,7 +61,7 @@ export function Footer({ navLinks = [] }: FooterProps) {
                                     onClick={() => navigateToSection("how-it-works")}
                                     className="transition-transform duration-200 text-left hover:scale-105 hover:text-foreground"
                                 >
-                                    Nasıl Çalışır?
+                                    How It Works
                                 </button>
                             </li>
                             <li>
@@ -70,7 +70,7 @@ export function Footer({ navLinks = [] }: FooterProps) {
                                     onClick={() => navigateToSection("pricing")}
                                     className="transition-transform duration-200 text-left hover:scale-105 hover:text-foreground"
                                 >
-                                    Fiyatlandırma
+                                    Pricing
                                 </button>
                             </li>
                         </ul>
@@ -83,7 +83,7 @@ export function Footer({ navLinks = [] }: FooterProps) {
                                     href="/support"
                                     className="transition-transform duration-200 hover:scale-105 hover:text-foreground"
                                 >
-                                    Destek
+                                    Support
                                 </Link>
                             </li>
                             <li>
@@ -91,7 +91,7 @@ export function Footer({ navLinks = [] }: FooterProps) {
                                     href="/terms-of-use"
                                     className="transition-transform duration-200 hover:scale-105 hover:text-foreground"
                                 >
-                                    Kullanım Koşulları
+                                    Terms of Use
                                 </Link>
                             </li>
                         </ul>
@@ -100,8 +100,7 @@ export function Footer({ navLinks = [] }: FooterProps) {
 
                 <div className="border-t pt-8 text-center text-sm text-muted-foreground">
                     <p>
-                        &copy; {new Date().getFullYear()} Magic Wrapper. Tüm hakları
-                        saklıdır.
+                        &copy; {new Date().getFullYear()} Magic Wrapper. All rights reserved.
                     </p>
                 </div>
             </div>
